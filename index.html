@@ -1,9 +1,4892 @@
+
+Conversation with Gemini
+how to custom it for free https://youcantseemee.github.io/portfolio/>
+
+Your live URL is [https://youcantseemee.github.io/portfolio/](https://youcantseemee.github.io/portfolio/)! 🎉 Your galaxy portfolio is officially online, live, and completely free.
+
+If you mean how to customize or update your website content going forward, it's very simple:
+
+Edit your code: Open your index.html file on your computer, make any changes you want (such as updating text, adding new projects, or tweaking colors), and save it.
+
+Upload to GitHub: Go to your portfolio repository on GitHub, drag and drop your updated index.html file right into the repository, and click Commit changes.
+
+See live updates: GitHub Pages will automatically detect the new file, rebuild your site in about 30 seconds, and your updates will show up live at your link!
+
+(Note: If you meant how to use a custom personal domain name like sachin.com instead of the github.io link, you can buy a custom domain from a registrar for a few dollars a year and point it to your GitHub Pages site for free using a CNAME record!)
+
+custom url
+
+To set up a custom domain name (like sachinycsm.com) for free using your GitHub Pages repository:
+
+Step 1: Add a CNAME File to Your Repository
+Open your project folder on your computer and create a new file named exactly CNAME (make sure it has no file extension like .txt or .html).
+
+Open the CNAME file in a text editor, type your exact custom domain name inside it (for example: sachinycsm.com), and save it.
+
+Upload this CNAME file into the root of your portfolio repository on GitHub.
+
+Step 2: Configure Your Domain DNS Settings
+Log in to the website where you bought your domain name (such as GoDaddy, Hostinger, Namecheap, etc.) and go to your DNS Management or DNS Settings page. You will need to add these records:
+
+If using an apex domain (e.g., sachinycsm.com):
+Add A records pointing your domain to GitHub's official IP addresses:
+
+185.199.108.153
+
+185.199.109.153
+
+185.199.110.153
+
+185.199.111.153
+
+If using a subdomain (e.g., [www.sachinycsm.com](https://www.sachinycsm.com) or portfolio.sachinycsm.com):
+Add a CNAME record:
+
+Host/Name: www (or your subdomain prefix)
+
+Value/Target: youcantseemee.github.io
+
+Step 3: Link it on GitHub
+Go back to your GitHub repository and click on Settings > Pages.   
+JPG
+
+Under Custom domain, type your domain name (sachinycsm.com) and click Save.
+
+Check the box for Enforce HTTPS once GitHub verifies the DNS setup (this can take anywhere from a few minutes up to 24 hours for DNS changes to fully propagate worldwide).
+
+free
+
+Yes, setting up your custom domain this way is 100% free! GitHub Pages does not charge anything to host custom domains or provide free SSL/HTTPS security certificates.
+
+The only thing that costs money is purchasing the domain name itself (like sachinycsm.com) from a domain registrar, but once you own the domain, connecting it to your GitHub portfolio costs $0.
+
+https://portfolio-8aez.onrender.com/
+
+like this
+
+To get a free custom URL link like portfolio-8aez.onrender.com, you don't even need to buy a domain name. You can use Render, Vercel, or Netlify instead of GitHub Pages. These platforms automatically give you a clean, free subdomain (.onrender.com, .vercel.app, or .netlify.app) instantly without any DNS configuration.
+
+Here is how you can host your portfolio on Render for free to get that exact style of URL:
+
+Sign up for a free account on Render using your GitHub account.
+
+Click the New + button at the top right and select Static Site.
+
+Connect your GitHub repository (portfolio) and select it.
+
+Leave the build command blank, set the publish directory to your root (or leave it default), and click Create Static Site.
+
+Render will instantly deploy your code and give you a free live URL ending in .onrender.com (similar to the link you shared)!
+
+Publish Directory
+
+The relative path of the directory containing built assets to publish. Examples: ./, ./build, dist and frontend/build.
+
+
+
+Requ
+
+For that Publish Directory field on Render, since your project is a simple HTML file sitting directly in the main folder of your repository, you just need to type:
+
+./
+
+(or you can leave it completely blank). That tells Render to look right in the root folder for your index.html file.
+
+Required
+
+That just means the field is required by the form! Since your input is finished, you can simply type ./ in that Publish Directory box (or leave it empty if the form lets you proceed), and then click the Create Static Site button at the bottom to finish deploying your portfolio.
+
+==> Cloning from https://github.com/YouCantSeeMee/portfolio
+
+==> Checking out commit 725e5f1e3142df0dee1e619cd30b9b851706fc38 in branch main
+
+==> Empty build command; skipping build
+
+==> Uploading build...
+
+==> Your site is live 🎉
+
+Your site is live! 🎉 Render has successfully cloned your repository and deployed your portfolio.
+
+You can now click the live URL provided in your Render dashboard (which will look similar to [https://portfolio-xxxx.onrender.com](https://portfolio-xxxx.onrender.com)) to see your portfolio online with that clean custom URL, completely for free!
+
+any other site the url is weirdhttps://portfolio-1-1e82.onrender.com
+
+If you want a cleaner, shorter URL that doesn't have random letters and numbers like -1-1e82, you can use Netlify or Vercel.
+
+Both platforms let you easily customize and change your free subdomain name to something clean (like sachin-portfolio.netlify.app or sachinycsm.netlify.app) right inside their settings for free. Here is how to do it on Netlify:
+
+Go to Netlify and log in with your GitHub account.
+
+Import your GitHub repository (portfolio). Once it deploys, Netlify will give you a random URL.
+
+Click on Site configuration in your dashboard, then go to Site details.
+
+Click the Change site name button.
+
+Type in whatever clean name you want (for example: sachin-portfolio), and click Save.
+
+Your site will instantly update to a much cleaner, professional free URL!
+
+the download cv says not file available
+
+That error happens because the SachinCV.pdf file hasn't been uploaded to your GitHub repository yet, so when someone clicks the button, the link is broken.
+
+To fix this in 3onda:
+
+Locate your resume PDF file on your computer and make sure it is named SachinCV.pdf (matching the exact spelling and capitalization in your code).
+
+Go to your portfolio repository on GitHub.
+
+Drag and drop your SachinCV.pdf file directly into the main repository page (right alongside your index.html file).
+
+Click Commit changes.
+
+Once Render or GitHub Pages updates your site (which takes about 30 seconds), clicking the Download CV button will successfully download your resume!
+
+when click download can you add pop up confirm download?
+
+Yes, we can easily add a quick JavaScript confirmation popup when visitors click the Download CV button. That way, a small alert will ask them: "Do you want to download Sachin's CV?" before the file actually downloads.
+
+Here is the updated code snippet for your Hero section download button. Update that part of your index.html to this:
+
+HTML
+<a href="SachinCV.pdf" download onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+    Download CV 📄
+</a>
+How it works:
+The onclick="return confirm(...) triggers a built-in browser confirmation dialog box.
+
+If the user clicks OK, the browser proceeds with downloading your SachinCV.pdf file.
+
+If the user clicks Cancel, the download is safely stopped.
+
+like on site theres gemini logo but on my portolio the black earth change how
+
+To change the black Earth logo (or default icon) on your portfolio to a custom Gemini logo, you just need to replace the image source or icon code inside your HTML file.
+
+Depending on how your portfolio is built, here are the two most common ways to fix it:
+
+Method 1: If it's an Image (<img> tag)
+If your logo is loaded as an image file, look for the <img> tag in your header/navbar inside index.html. It will look something like this:
+
+HTML
+<img src="earth-logo.png" alt="Logo" class="w-8 h-8">
+To change it, simply download a Gemini logo image (or any icon you want), save it in your project folder (for example as gemini-logo.png), upload it to GitHub, and update your code:
+
+HTML
+<img src="gemini-logo.png" alt="Gemini Logo" class="w-8 h-8">
+Method 2: If it's an SVG Icon
+If it's drawn directly using code as an SVG graphic, find the <svg>...</svg> block in your navbar where the earth icon is defined and replace those lines with an SVG path of the Gemini logo.
+
+If you want a clean Gemini-style spark or star logo using SVG, you can use this snippet:
+
+HTML
+<svg class="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0z"/>
+</svg>
+Just paste your preferred logo code or image name into your index.html, save, and push the changes to GitHub/Render!
+
+make it and send full code i want ice bear logo
+
+HTML
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin Kumar | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-purple-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Ice Bear Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center shadow-lg border-2 border-slate-400 group-hover:scale-105 transition-transform overflow-hidden relative" title="Ice Bear">
+                    <!-- Ice Bear minimalist face representation -->
+                    <div class="absolute top-3 w-1.5 h-1.5 bg-slate-900 rounded-full -left-2.5"></div>
+                    <div class="absolute top-3 w-1.5 h-1.5 bg-slate-900 rounded-full -right-2.5"></div>
+                    <div class="absolute top-4 w-2 h-1 bg-slate-900 rounded-full"></div>
+                    <!-- Simplified Ice Bear Silhouette/Head -->
+                    <span class="text-xs font-black text-slate-800 tracking-tighter">ICE</span>
+                </div>
+                <span class="text-xl font-bold tracking-wider bg-gradient-to-r from-blue-200 via-purple-300 to-white bg-clip-text text-transparent">Sachin Kumar</span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="SachinCV.pdf" onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-purple-300 rounded-full hover:bg-purple-600 hover:text-white transition-all">
+                Resume 📄
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-32 pb-16 flex items-center justify-center px-6 relative overflow-hidden">
+        <!-- Glow background effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1 px-4 rounded-full glass-card text-purple-300 text-xs font-semibold tracking-widest uppercase mb-6 border border-purple-500/20">
+                Welcome to my Universe
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
+                Hi, I'm <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Sachin Kumar</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Building sleek web experiences, full-stack applications, and interactive digital spaces with modern technologies.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-purple-600/30 transition-all">
+                    Explore Projects
+                </a>
+                <a href="SachinCV.pdf" onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+                    Download CV 📄
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <p class="text-slate-400">Some of the work I've built recently</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="glass-card p-6 rounded-2xl hover:border-purple-500/50 transition-all group">
+                <div class="h-48 rounded-xl bg-slate-900 mb-6 overflow-hidden flex items-center justify-center border border-white/5">
+                    <span class="text-slate-600 group-hover:scale-110 transition-transform font-bold text-lg">Galaxy Portfolio</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                <p class="text-slate-400 text-sm mb-6">A custom designed interactive modern personal portfolio built with Tailwind CSS and HTML.</p>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs px-3 py-1 rounded-full glass-card text-purple-300">HTML/Tailwind</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
+        <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+                <p class="text-slate-400 text-sm">Have a question or want to work together?</p>
+            </div>
+            <!-- Formspree Contact Form -->
+            <form action="https://formspree.io/f/mvkzljln" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                    <input type="text" name="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Email</label>
+                    <input type="email" name="email" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Message</label>
+                    <textarea name="message" rows="4" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-purple-600/30 transition-all">
+                    Send Message 🚀
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-slate-500 border-t border-white/5">
+        <p>&copy; 2026 Sachin Kumar. All rights reserved. Ice Bear approved.</p>
+    </footer>
+
+</body>
+</html>
+bro full code everything
+
+HTML
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Kumar | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-purple-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-card border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Ice Bear Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center shadow-lg border-2 border-slate-400 group-hover:scale-105 transition-transform overflow-hidden relative" title="Ice Bear">
+                    <!-- Ice Bear minimalist face representation -->
+                    <div class="absolute top-3 w-1.5 h-1.5 bg-slate-900 rounded-full left-2.5"></div>
+                    <div class="absolute top-3 w-1.5 h-1.5 bg-slate-900 rounded-full right-2.5"></div>
+                    <div class="absolute top-4 w-2 h-1 bg-slate-900 rounded-full"></div>
+                    <span class="text-xs font-black text-slate-800 tracking-tighter">ICE</span>
+                </div>
+                <span class="text-xl font-bold tracking-wider bg-gradient-to-r from-blue-200 via-purple-300 to-white bg-clip-text text-transparent">Sachin Kumar</span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
+                <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA -->
+            <a href="SachinCV.pdf" onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-purple-300 rounded-full hover:bg-purple-600 hover:text-white transition-all">
+                Resume 📄
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-32 pb-16 flex items-center justify-center px-6 relative overflow-hidden">
+        <!-- Glow background effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1 px-4 rounded-full glass-card text-purple-300 text-xs font-semibold tracking-widest uppercase mb-6 border border-purple-500/20">
+                Welcome to my Universe
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
+                Hi, I'm <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">Sachin Kumar</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Building sleek web experiences, full-stack applications, and interactive digital spaces with modern technologies.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-purple-600/30 transition-all">
+                    Explore Projects
+                </a>
+                <a href="SachinCV.pdf" onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+                    Download CV 📄
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-4">
+                    I am a passionate developer focused on building clean, user-friendly, and responsive applications. I love turning complex problems into elegant, minimalist digital solutions.
+                </p>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    When I'm not coding, you can find me exploring new tech stacks, optimizing UI/UX architectures, or chilling like Ice Bear. 🧊
+                </p>
+            </div>
+            <div class="glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-center items-center text-center">
+                <div class="w-20 h-20 rounded-full bg-slate-200 flex items-center justify-center shadow-xl border-2 border-slate-400 relative mb-4">
+                    <div class="absolute top-6 w-2.5 h-2.5 bg-slate-900 rounded-full left-5"></div>
+                    <div class="absolute top-6 w-2.5 h-2.5 bg-slate-900 rounded-full right-5"></div>
+                    <div class="absolute top-8 w-4 h-2 bg-slate-900 rounded-full"></div>
+                    <span class="text-xs font-black text-slate-800 tracking-tighter">ICE</span>
+                </div>
+                <h3 class="text-lg font-bold text-white">Ice Bear Mode</h3>
+                <p class="text-xs text-slate-400 mt-1">Calm, collected, and ready to code.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <p class="text-slate-400">Some of the work I've built recently</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="glass-card p-6 rounded-2xl hover:border-purple-500/50 transition-all group">
+                <div class="h-48 rounded-xl bg-slate-900 mb-6 overflow-hidden flex items-center justify-center border border-white/5">
+                    <span class="text-slate-600 group-hover:scale-110 transition-transform font-bold text-lg">Galaxy Portfolio</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                <p class="text-slate-400 text-sm mb-6">A custom designed interactive modern personal portfolio built with Tailwind CSS and HTML.</p>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs px-3 py-1 rounded-full glass-card text-purple-300">HTML/Tailwind</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Core Skills</h2>
+            <p class="text-slate-400">Technologies and tools I work with</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="glass-card p-6 rounded-2xl hover:border-purple-500/30 transition-all">
+                <span class="text-lg font-bold text-purple-300">HTML5 / CSS3</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl hover:border-purple-500/30 transition-all">
+                <span class="text-lg font-bold text-purple-300">Tailwind CSS</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl hover:border-purple-500/30 transition-all">
+                <span class="text-lg font-bold text-purple-300">JavaScript</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl hover:border-purple-500/30 transition-all">
+                <span class="text-lg font-bold text-purple-300">Git & GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
+        <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+                <p class="text-slate-400 text-sm">Have a question or want to work together?</p>
+            </div>
+            <!-- Formspree Contact Form -->
+            <form action="https://formspree.io/f/mvkzljln" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                    <input type="text" name="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Email</label>
+                    <input type="email" name="email" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Message</label>
+                    <textarea name="message" rows="4" required class="w-full bg-slate-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-purple-600/30 transition-all">
+                    Send Message 🚀
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-xs text-slate-500 border-t border-white/5">
+        <p>&copy; 2026 Sachin Kumar. All rights reserved. Ice Bear approved. 🧊</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sachin Kumar | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        /* Galaxy Theme Base */
+
+        body {
+
+            background-color: #05010f;
+
+            color: #e2e8f0;
+
+        }
+
+
+
+        /* Animated Nebula Clouds */
+
+        @keyframes blob {
+
+            0% { transform: translate(0px, 0px) scale(1); }
+
+            33% { transform: translate(30px, -50px) scale(1.1); }
+
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+
+            100% { transform: translate(0px, 0px) scale(1); }
+
+        }
+
+        .animate-blob { animation: blob 15s infinite alternate; }
+
+        .animation-delay-2000 { animation-delay: 2s; }
+
+        .animation-delay-4000 { animation-delay: 4s; }
+
+
+
+        /* Zero-Gravity Floating Effect */
+
+        .floating { animation: float 6s ease-in-out infinite; }
+
+        .floating-delayed { animation: float 6s ease-in-out 3s infinite; }
+
+        @keyframes float {
+
+            0% { transform: translateY(0px); }
+
+            50% { transform: translateY(-15px); }
+
+            100% { transform: translateY(0px); }
+
+        }
+
+
+
+        /* Glassmorphism Cards */
+
+        .glass-card {
+
+            background: rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(16px);
+
+            -webkit-backdrop-filter: blur(16px);
+
+            border: 1px solid rgba(168, 85, 247, 0.2);
+
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+        }
+
+        .glass-card:hover {
+
+            border: 1px solid rgba(168, 85, 247, 0.6);
+
+            background: rgba(255, 255, 255, 0.05);
+
+            box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.2);
+
+        }
+
+
+
+        /* ICE BREEZE SNOWY EFFECT FOR CERTIFICATIONS, EDUCATION & LANGUAGES */
+
+        .ice-breeze-card {
+
+            background: rgba(186, 230, 253, 0.03);
+
+            backdrop-filter: blur(16px);
+
+            -webkit-backdrop-filter: blur(16px);
+
+            border: 1px solid rgba(56, 189, 248, 0.3);
+
+            box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.05);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: all 0.4s ease;
+
+        }
+
+        .ice-breeze-card:hover {
+
+            border: 1px solid rgba(56, 189, 248, 0.8);
+
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4), inset 0 0 25px rgba(56, 189, 248, 0.2);
+
+            transform: translateY(-4px);
+
+        }
+
+        .ice-breeze-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: -50%;
+
+            left: -50%;
+
+            width: 200%;
+
+            height: 200%;
+
+            background-image: radial-gradient(2px 2px at 40px 60px, rgba(255,255,255,0.4), rgba(0,0,0,0)), 
+
+                              radial-gradient(1px 1px at 120px 140px, rgba(56,189,248,0.5), rgba(0,0,0,0)),
+
+                              radial-gradient(2px 2px at 200px 80px, rgba(255,255,255,0.3), rgba(0,0,0,0));
+
+            background-repeat: repeat;
+
+            background-size: 250px 250px;
+
+            animation: snowfall 12s linear infinite;
+
+            pointer-events: none;
+
+            opacity: 0.6;
+
+        }
+
+        @keyframes snowfall {
+
+            0% { transform: translateY(0) translateX(0); }
+
+            100% { transform: translateY(100px) translateX(20px); }
+
+        }
+
+        .ice-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+
+        /* Glowing Buttons */
+
+        .btn-glow {
+
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .btn-glow:hover {
+
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+
+            transform: translateY(-4px) scale(1.02);
+
+        }
+
+        
+
+        /* Heading Hover Effects */
+
+        .hover-heading {
+
+            transition: all 0.3s ease-in-out;
+
+            display: inline-block;
+
+            cursor: default;
+
+        }
+
+        .hover-heading:hover {
+
+            transform: scale(1.05) translateY(-2px);
+
+            color: #d8b4fe; 
+
+            text-shadow: 0 4px 20px rgba(168, 85, 247, 0.6);
+
+        }
+
+        
+
+        /* Flight Path Map */
+
+        .flight-path {
+
+            position: relative;
+
+            height: 250px;
+
+            background: radial-gradient(ellipse at center, rgba(30,10,60,0.8) 0%, rgba(5,1,15,1) 100%);
+
+            border-radius: 1rem;
+
+            margin-top: 2rem;
+
+            overflow: hidden;
+
+            border: 2px solid rgba(168, 85, 247, 0.5); 
+
+            box-shadow: inset 0 0 30px rgba(168,85,247,0.2);
+
+        }
+
+        .plane {
+
+            position: absolute;
+
+            font-size: 2.5rem;
+
+            transition: all 2.5s ease-in-out;
+
+            z-index: 10;
+
+            filter: drop-shadow(0px 5px 10px rgba(168,85,247,0.8));
+
+            pointer-events: none;
+
+        }
+
+        
+
+        .path-line {
+
+            position: absolute;
+
+            color: #d8b4fe;
+
+            font-size: 1.5rem;
+
+            opacity: 0.5;
+
+            z-index: 5;
+
+            animation: pulsePath 2s infinite;
+
+        }
+
+        @keyframes pulsePath {
+
+            0%, 100% { opacity: 0.2; transform: translateX(0); }
+
+            50% { opacity: 0.9; transform: translateX(8px); text-shadow: 0 0 10px #d8b4fe; }
+
+        }
+
+
+
+        .node {
+
+            position: absolute;
+
+            width: 24px;
+
+            height: 24px;
+
+            background: #a855f7; 
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            transform: translate(-50%, -50%);
+
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.9);
+
+            transition: all 0.3s ease;
+
+            animation: pulseNode 2s infinite;
+
+            border: 2px solid #fff;
+
+            z-index: 20;
+
+        }
+
+        .node:hover {
+
+            transform: translate(-50%, -50%) scale(1.5);
+
+            background: #e9d5ff;
+
+            animation: none;
+
+        }
+
+        @keyframes pulseNode {
+
+            0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7); }
+
+            70% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+
+            100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
+
+        }
+
+        .node-label {
+
+            position: absolute;
+
+            font-weight: 800;
+
+            color: #f8fafc; 
+
+            transform: translate(-50%, 30px);
+
+            text-align: center;
+
+            white-space: nowrap; 
+
+            pointer-events: none;
+
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
+        }
+
+
+
+        /* Chat Widget */
+
+        #chat-widget {
+
+            transition: all 0.3s ease;
+
+            transform-origin: bottom right;
+
+        }
+
+        .chat-open { transform: scale(1); opacity: 1; pointer-events: all; }
+
+        .chat-closed { transform: scale(0); opacity: 0; pointer-events: none; }
+
+        
+
+        .gradient-btn {
+
+            background: linear-gradient(135deg, #a855f7, #ec4899, #6366f1);
+
+            background-size: 300% 300%;
+
+            animation: gradientMove 4s ease infinite;
+
+        }
+
+        @keyframes gradientMove {
+
+            0% { background-position: 0% 50%; }
+
+            50% { background-position: 100% 50%; }
+
+            100% { background-position: 0% 50%; }
+
+        }
+
+
+
+        /* 3D Flip Card Container Styles */
+
+        .profile-container {
+
+            perspective: 1000px;
+
+            width: 320px;
+
+            height: 320px;
+
+        }
+
+        .profile-card-inner {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 100%;
+
+            text-align: center;
+
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+            transform-style: preserve-3d;
+
+        }
+
+        .profile-card-front, .profile-card-back {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            backface-visibility: hidden;
+
+            -webkit-backface-visibility: hidden;
+
+            border-radius: 9999px;
+
+            overflow: hidden;
+
+        }
+
+        .profile-card-back {
+
+            transform: rotateY(180deg);
+
+        }
+
+
+
+        /* Snow Effect Animation Styles for Projects Section */
+
+        .snow-container {
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            border-radius: inherit;
+
+            z-index: 1;
+
+        }
+
+        .snowflake {
+
+            position: absolute;
+
+            background: #ffffff;
+
+            border-radius: 50%;
+
+            opacity: 0.8;
+
+            animation: snowfall linear infinite;
+
+        }
+
+        .project-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="font-sans antialiased relative">
+
+
+
+    <!-- Fixed Cosmic/Cloud Background -->
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 90px 40px, #ddd, rgba(0,0,0,0)); background-size: 200px 200px;"></div>
+
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/30 blur-[120px] rounded-full animate-blob"></div>
+
+        <div class="absolute top-[30%] right-[-10%] w-[40%] h-[60%] bg-indigo-600/20 blur-[150px] rounded-full animate-blob animation-delay-2000"></div>
+
+        <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[50%] bg-fuchsia-600/20 blur-[120px] rounded-full animate-blob animation-delay-4000"></div>
+
+    </div>
+
+
+
+    <!-- Navigation -->
+
+    <nav class="fixed w-full bg-[#05010f]/60 backdrop-blur-xl shadow-lg z-40 border-b border-purple-500/20">
+
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+            <h1 class="text-2xl font-extrabold text-purple-400 tracking-widest uppercase">Sachin</h1>
+
+            <div class="space-x-6 hidden md:flex font-semibold text-gray-300">
+
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+
+                <a href="#journey" class="hover:text-purple-400 transition">Journey</a>
+
+                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+
+                <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+
+                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Hero Section -->
+
+    <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 min-h-[90vh]">
+
+        <div class="md:w-1/2 text-center md:text-left z-10">
+
+            <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 hover-heading drop-shadow-2xl">
+
+                Hi, I'm <span id="name-flip" class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 transition-opacity duration-500">Sachin</span>
+
+            </h2>
+
+            <p class="text-lg md:text-2xl text-gray-300 mb-8 leading-relaxed font-light">
+
+                Software Developer & ERP Support Specialist exploring REST APIs, Big Data, and digital innovation.
+
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start mb-8">
+
+                <a href="#projects" class="gradient-btn group px-8 py-4 text-white font-bold rounded-full flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(168,85,247,0.5)]">
+
+                    Explore Cosmos 
+
+                    <span class="group-hover:translate-x-2 transition-transform duration-300">🚀</span>
+
+                </a>
+
+                
+
+<a href="SachinCV.pdf" download onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+
+    Download CV 📄
+
+</a>
+
+                </a>
+
+            </div>
+
+            <div class="flex gap-6 justify-center md:justify-start text-sm text-purple-200 font-medium glass-card inline-flex px-6 py-3 rounded-full">
+
+                <p><i class="fa-solid fa-location-dot text-pink-400 mr-2"></i> Ludhiana, Punjab</p>
+
+                <p><i class="fa-solid fa-envelope text-pink-400 mr-2"></i> sachin25300@gmail.com</p>
+
+            </div>
+
+        </div>
+
+        <div class="md:w-1/2 flex justify-center relative">
+
+            <div class="absolute inset-0 bg-fuchsia-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
+
+            <!-- 3D Flipping Profile Picture Container (Mandalorian <-> Ice Bear) -->
+
+            <div class="profile-container floating relative z-10 cursor-pointer">
+
+                <div id="profile-card-inner" class="profile-card-inner shadow-[0_0_50px_rgba(168,85,247,0.6)] rounded-full border-4 border-purple-400/50">
+
+                    <div class="profile-card-front">
+
+                        <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?q=80&w=800&auto=format&fit=crop" alt="Mandalorian Profile" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <div class="profile-card-back">
+
+                        <img src="https://i.pinimg.com/236x/cb/62/80/cb62802e4a44b39873a4eacc8dd5bbec.jpg" alt="We Bare Bears Profile" class="w-full h-full object-cover">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Career Journey Map & Floating Experience Cards -->
+
+    <section id="journey" class="py-20 px-4 relative z-10">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-12">
+
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">My Career Orbit 🪐</h3>
+
+                <p class="text-purple-300 mt-3 font-light">Click a constellation to travel there instantly!</p>
+
+            </div>
+
+            
+
+            <div class="flight-path floating-delayed">
+
+                <div class="path-line" style="left: 30%; top: 48%; transform: rotate(-45deg);">➔</div>
+
+                <div class="path-line" style="left: 65%; top: 38%; transform: rotate(20deg);">➔</div>
+
+
+
+                <div class="node" style="left: 15%; top: 70%;" onclick="highlightCard('pune')">
+
+                    <span class="node-label">Pune<br><span class="text-sm text-pink-400 font-bold">Kumar Fabricators</span></span>
+
+                </div>
+
+                
+
+                <div class="node" style="left: 50%; top: 30%;" onclick="highlightCard('hhp')">
+
+                    <span class="node-label">Noida<br><span class="text-sm text-pink-400 font-bold">HHP Software</span></span>
+
+                </div>
+
+
+
+                <div class="node" style="left: 85%; top: 50%;" onclick="highlightCard('dainik')">
+
+                    <span class="absolute -top-12 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-4 py-1.5 rounded-full whitespace-nowrap font-bold shadow-[0_0_15px_rgba(236,72,153,0.8)] animate-pulse pointer-events-none">
+
+                        📍 Current Base
+
+                    </span>
+
+                    <span class="node-label">Noida<br><span class="text-sm text-pink-400 font-bold">Dainik Jagran</span></span>
+
+                </div>
+
+
+
+                <div id="airplane" class="plane" style="left: 0%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); opacity: 0;">🚀</div>
+
+            </div>
+
+
+
+            <!-- Glassmorphism Experience Cards -->
+
+            <div class="grid lg:grid-cols-3 gap-8 mt-16">
+
+                <div id="card-pune" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-chart-pie text-pink-400"></i> Data Analyst</h4>
+
+                    <p class="text-purple-300 font-bold mb-4">Kumar Fabricators (Pune)</p>
+
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+
+                        <li>Developed interactive dashboards for real-time monitoring.</li>
+
+                        <li>Designed predictive models to estimate project timelines, improving accuracy by 20%.</li>
+
+                        <li>Leveraged big data analytics driving a 15% improvement in operational efficiency.</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div id="card-hhp" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-code text-pink-400"></i> Software Dev</h4>
+
+                    <p class="text-purple-300 font-bold mb-4">HHP Software (Noida)</p>
+
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+
+                        <li>Led enhancement of software testing methodologies, resulting in a 15% increase in efficiency.</li>
+
+                        <li>Identified and documented bugs significantly improving UX and reliability.</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div id="card-dainik" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-server text-pink-400"></i> ERP Support</h4>
+
+                    <p class="text-purple-300 font-bold mb-4">Dainik Jagran (Noida) <br><span class="text-xs text-gray-400 font-normal">July 2026 - Present</span></p>
+
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+
+                        <li>Provided tech support handling database ops, REST API integration, and troubleshooting.</li>
+
+                        <li>Performed application testing and collaborated on microservices issues.</li>
+
+                        <li>Managed records and role-based permissions ensuring 100% data accuracy for 100+ users.</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Digital Creations Section (Direct Display with Snow Effect) -->
+
+    <section id="projects" class="py-20 px-4 relative z-10">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">Digital Creations 🌠</h3>
+
+                <p class="text-purple-300 mt-2 font-light">Explore missions and innovative applications developed across galaxies.</p>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- PMS Tracker -->
+
+                <div class="glass-card rounded-3xl p-8 floating group relative overflow-hidden">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 10%; width: 4px; height: 4px; animation-duration: 3s; animation-delay: 0s;"></div>
+
+                        <div class="snowflake" style="left: 40%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 1s;"></div>
+
+                        <div class="snowflake" style="left: 70%; width: 3px; height: 3px; animation-duration: 3.5s; animation-delay: 2s;"></div>
+
+                        <div class="snowflake" style="left: 90%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.5s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">PMS Tracker</h4>
+
+                            <span class="text-xs px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full font-semibold border border-pink-500/30">Health Tech</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">Python • Flask • Celery</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Engineered a comprehensive web app using Flask to enable users to track and manage premenstrual symptoms. Integrated advanced authentication protocols with Flask-Login ensuring a 100% secure user data management system. Automated notification systems using Celery and Redis, reducing manual intervention by 40%.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Fake Logo Detector -->
+
+                <div class="glass-card rounded-3xl p-8 floating-delayed group relative overflow-hidden">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 20%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.8s;"></div>
+
+                        <div class="snowflake" style="left: 50%; width: 4px; height: 4px; animation-duration: 3.2s; animation-delay: 0.2s;"></div>
+
+                        <div class="snowflake" style="left: 80%; width: 6px; height: 6px; animation-duration: 5s; animation-delay: 1.5s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Fake Logo Detector</h4>
+
+                            <span class="text-xs px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full font-semibold border border-purple-500/30">AI / ML</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">TensorFlow • R • Python</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Designed and deployed a highly accurate logo detection model using TensorFlow, achieving a 92% detection accuracy. Leveraged R for advanced regression modeling to refine detection capabilities, improving precision by 20%.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QR Scam Detector -->
+
+                <div class="glass-card rounded-3xl p-8 floating group relative overflow-hidden" style="animation-delay: 1.5s;">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 15%; width: 4px; height: 4px; animation-duration: 3.8s; animation-delay: 1.2s;"></div>
+
+                        <div class="snowflake" style="left: 45%; width: 5px; height: 5px; animation-duration: 4.2s; animation-delay: 0.3s;"></div>
+
+                        <div class="snowflake" style="left: 85%; width: 3px; height: 3px; animation-duration: 3s; animation-delay: 2.2s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">QR Scam Detector</h4>
+
+                            <span class="text-xs px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full font-semibold border border-indigo-500/30">Cyber Security</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">ML • Python • Security</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Developed a robust scanning tool to identify and block malicious or phishing QR codes in real-time, significantly enhancing user data security and preventing cyber fraud across web platforms.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Event Management System -->
+
+                <div class="glass-card rounded-3xl p-8 floating-delayed group relative overflow-hidden" style="animation-delay: 2.5s;">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 30%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 0.5s;"></div>
+
+                        <div class="snowflake" style="left: 65%; width: 4px; height: 4px; animation-duration: 3.5s; animation-delay: 1.8s;"></div>
+
+                        <div class="snowflake" style="left: 95%; width: 5px; height: 5px; animation-duration: 4.1s; animation-delay: 1s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Event Management</h4>
+
+                            <span class="text-xs px-3 py-1 bg-fuchsia-500/20 text-fuchsia-300 rounded-full font-semibold border border-fuchsia-500/30">Full Stack</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">Java • React • REST APIs</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Designed a comprehensive platform for organizing and scheduling events, featuring seamless user registration, ticketing capabilities, and real-time dashboard analytics for event hosts and attendees.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Technical Skills Section -->
+
+    <section id="skills" class="pt-20 pb-10 px-4 relative z-10">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">Tech Arsenal 🛠️</h3>
+
+            </div>
+
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Languages -->
+
+                <div class="glass-card rounded-3xl p-8 group">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Languages</h4>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Java</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">JavaScript</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Python</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">R</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">SQL</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Frameworks -->
+
+                <div class="glass-card rounded-3xl p-8 group">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Frameworks</h4>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">HTML/CSS</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Bootstrap</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Hadoop</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Selenium</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Oracle</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Core Skills -->
+
+                <div class="glass-card rounded-3xl p-8 group">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+
+                            <i class="fa-solid fa-gears"></i>
+
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Core Skills</h4>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Algorithms</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Testing</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Web Design</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Tableau</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Glowing Visual Break Line -->
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent my-24"></div>
+
+
+
+            <!-- Certs, Edu & Spoken Languages WITH ICE BREEZE SNOWY EFFECT -->
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Certifications (Ice Breeze) -->
+
+                <div class="ice-breeze-card p-8 rounded-3xl">
+
+                    <div class="ice-content">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Certifications</h3>
+
+                        <ul class="space-y-4 text-sm text-sky-100">
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>DAG Authoring for Apache Airflow 3</strong> (Feb 2026)</span></li>
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>Computer Graphics and Visualization</strong> - Univ. of Tokyo (Nov 2024)</span></li>
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>The Complete Theory of Computation</strong> (Sep 2023)</span></li>
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>Data Structures and Algorithms</strong> - Amazon Jr Software Dev (Dec 2022)</span></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                
+
+                <!-- Education (Ice Breeze) -->
+
+                <div class="ice-breeze-card p-8 rounded-3xl">
+
+                    <div class="ice-content">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Education</h3>
+
+                        <h4 class="text-xl font-bold text-white">Lovely Professional University</h4>
+
+                        <p class="text-sky-300 font-bold mb-2">Phagwara, Punjab</p>
+
+                        <p class="text-sky-100 font-light mt-4">B.Tech - Computer Science and Engineering</p>
+
+                        <p class="text-sky-400 text-sm mt-1">2021 - 2025</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Languages (Ice Breeze) -->
+
+                <div class="ice-breeze-card p-8 rounded-3xl">
+
+                    <div class="ice-content">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Languages</h3>
+
+                        <div class="flex flex-wrap gap-3">
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Hindi</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">English</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Japanese</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Punjabi</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Bengali</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Glassmorphism Contact Section with LIVE Formspree Backend -->
+
+    <section id="contact" class="py-24 px-4 relative z-10">
+
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 glass-card p-12 rounded-[3rem] relative">
+
+            <div class="md:w-1/2 text-center md:text-left">
+
+                <h3 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">Make Contact 📡</h3>
+
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed font-light">
+
+                    Ready to launch a new project or discuss tech innovations? Transmit a message.
+
+                </p>
+
+                <div class="space-y-6 text-lg font-bold text-gray-200">
+
+                    <p class="flex items-center justify-center md:justify-start gap-4">
+
+                        <span class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400"><i class="fa-solid fa-envelope"></i></span> 
+
+                        sachin25300@gmail.com
+
+                    </p>
+
+                    <p class="flex items-center justify-center md:justify-start gap-4">
+
+                        <span class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400"><i class="fa-solid fa-location-dot"></i></span> 
+
+                        Ludhiana, Punjab
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="md:w-1/2 w-full">
+
+                <!-- Connected Formspree Form Action Endpoint -->
+
+                <form id="contact-form" action="https://formspree.io/f/maeqvgke" method="POST" class="space-y-6" onsubmit="handleContactSubmit(event)">
+
+                    <div>
+
+                        <input type="text" name="name" id="contact-name" placeholder="Pilot Name" required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 backdrop-blur-md">
+
+                    </div>
+
+                    <div>
+
+                        <input type="email" name="email" id="contact-email" placeholder="Comms Channel (Email)" required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 backdrop-blur-md">
+
+                    </div>
+
+                    <div>
+
+                        <textarea name="message" id="contact-msg" rows="4" placeholder="Transmission Log..." required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 resize-none backdrop-blur-md"></textarea>
+
+                    </div>
+
+                    <button type="submit" class="gradient-btn w-full text-white font-bold text-xl py-4 rounded-2xl shadow-[0_0_30px_rgba(236,72,153,0.4)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-[1.02] transition-all duration-300">
+
+                        Transmit <i class="fa-solid fa-satellite-dish ml-2"></i>
+
+                    </button>
+
+                </form>
+
+                <!-- Success Popup Banner -->
+
+                <div id="form-success-banner" class="hidden mt-4 p-4 rounded-2xl bg-emerald-500/20 border border-emerald-500 text-emerald-300 text-center font-bold backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.3)] animate-pulse">
+
+                    Transmission Successful! 🚀 Your message has been beamed to Sachin.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="bg-black/80 backdrop-blur-md text-gray-500 text-center py-8 border-t border-white/5 relative z-10">
+
+        <p>&copy; 2026 Sachin Kumar. Navigating the digital cosmos.</p>
+
+    </footer>
+
+
+
+    <!-- Floating AI Chat Assistant -->
+
+    <div class="fixed bottom-6 right-6 z-50">
+
+        <button onclick="toggleChat()" class="gradient-btn w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.6)] text-white text-3xl hover:rotate-12 transition-transform border-2 border-white/20">
+
+            🤖
+
+        </button>
+
+
+
+        <div id="chat-widget" class="chat-closed absolute bottom-20 right-0 w-80 glass-card rounded-3xl flex flex-col overflow-hidden border-2 border-pink-500/50">
+
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white font-bold flex justify-between items-center shadow-md">
+
+                <span>Ycsm</span>
+
+                <button onclick="toggleChat()" class="text-white hover:text-gray-300 text-xl"><i class="fa-solid fa-times"></i></button>
+
+            </div>
+
+            <div id="chat-box" class="p-4 h-64 overflow-y-auto bg-black/60 flex flex-col gap-3 text-sm">
+
+                <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md">
+
+                    Greetings! I'm an AI construct loaded with Sachin's data. Ask me about his skills, education, or missions (projects)!
+
+                </div>
+
+            </div>
+
+            <div class="p-3 bg-black/80 border-t border-white/10 flex gap-2">
+
+                <input type="text" id="chat-input" placeholder="Query..." class="flex-1 outline-none px-4 py-2 text-sm bg-white/5 text-white placeholder-gray-500 rounded-xl border border-white/10 focus:border-pink-500 transition-colors" onkeypress="handleEnter(event)">
+
+                <button onclick="sendMessage()" class="bg-pink-600 text-white px-4 py-2 rounded-xl hover:bg-pink-500 font-bold shadow-[0_0_15px_rgba(236,72,153,0.5)]"><i class="fa-solid fa-paper-plane"></i></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Scripts -->
+
+    <script>
+
+        // --- Live Formspree Email Sending & Confirmation Banner Logic ---
+
+        async function handleContactSubmit(e) {
+
+            e.preventDefault();
+
+            const form = document.getElementById('contact-form');
+
+            const successBanner = document.getElementById('form-success-banner');
+
+            const formData = new FormData(form);
+
+
+
+            try {
+
+                const response = await fetch(form.action, {
+
+                    method: form.method,
+
+                    body: formData,
+
+                    headers: { 'Accept': 'json' }
+
+                });
+
+
+
+                if (response.ok) {
+
+                    form.reset();
+
+                    successBanner.classList.remove('hidden');
+
+                    setTimeout(() => {
+
+                        successBanner.classList.add('hidden');
+
+                    }, 5000);
+
+                } else {
+
+                    alert('Transmission failed. Please try emailing directly at sachin25300@gmail.com');
+
+                }
+
+            } catch (error) {
+
+                alert('Network error. Please try emailing directly at sachin25300@gmail.com');
+
+            }
+
+        }
+
+
+
+        // --- Name & 3D Profile Card Flip Animation Logic ---
+
+        const nameEl = document.getElementById('name-flip');
+
+        const cardInner = document.getElementById('profile-card-inner');
+
+        
+
+        let isFlipped = false;
+
+
+
+        setInterval(() => {
+
+            nameEl.style.opacity = '0';
+
+            
+
+            setTimeout(() => {
+
+                nameEl.innerText = nameEl.innerText === 'Sachin' ? 'サチン' : 'Sachin';
+
+                nameEl.style.opacity = '1';
+
+            }, 250);
+
+
+
+            isFlipped = !isFlipped;
+
+            if (isFlipped) {
+
+                cardInner.style.transform = 'rotateY(180deg)';
+
+            } else {
+
+                cardInner.style.transform = 'rotateY(0deg)';
+
+            }
+
+        }, 4000); 
+
+
+
+        // --- Experience Highlight & Scroll Logic ---
+
+        function highlightCard(id, autoScroll = false) {
+
+            ['pune', 'hhp', 'dainik'].forEach(cardId => {
+
+                const card = document.getElementById(`card-${cardId}`);
+
+                card.classList.remove('border-pink-500', 'shadow-[0_0_30px_rgba(236,72,153,0.3)]', 'scale-[1.02]', 'bg-white/10');
+
+                card.classList.add('border-purple-500/30');
+
+            });
+
+
+
+            const activeCard = document.getElementById(`card-${id}`);
+
+            activeCard.classList.remove('border-purple-500/30');
+
+            activeCard.classList.add('border-pink-500', 'shadow-[0_0_30px_rgba(236,72,153,0.3)]', 'scale-[1.02]', 'bg-white/10');
+
+
+
+            if (!autoScroll) {
+
+                activeCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            }
+
+        }
+
+
+
+        // --- Auto Airplane Background Animation Loop ---
+
+        function runFlightLoop() {
+
+            const plane = document.getElementById('airplane');
+
+            plane.style.transition = 'none';
+
+            plane.style.opacity = '0';
+
+            plane.style.left = '-10%';
+
+            plane.style.top = '70%';
+
+            plane.style.transform = 'translate(-50%, -50%) rotate(-45deg)';
+
+            
+
+            setTimeout(() => {
+
+                plane.style.transition = 'all 2.5s ease-in-out';
+
+                plane.style.opacity = '1';
+
+                
+
+                plane.style.left = '15%';
+
+                plane.style.top = '70%';
+
+                highlightCard('pune', true);
+
+                
+
+                setTimeout(() => {
+
+                    plane.style.left = '50%';
+
+                    plane.style.top = '30%';
+
+                    plane.style.transform = 'translate(-50%, -50%) rotate(20deg)';
+
+                    highlightCard('hhp', true);
+
+                }, 3500);
+
+
+
+                setTimeout(() => {
+
+                    plane.style.left = '85%';
+
+                    plane.style.top = '50%';
+
+                    plane.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+
+                    highlightCard('dainik', true);
+
+                }, 7000);
+
+                
+
+                setTimeout(() => {
+
+                    plane.style.left = '110%';
+
+                    plane.style.opacity = '0';
+
+                }, 10500);
+
+
+
+                setTimeout(runFlightLoop, 12000);
+
+            }, 100);
+
+        }
+
+        window.addEventListener('DOMContentLoaded', runFlightLoop);
+
+
+
+        // --- Smart Chat Widget Logic with Supercharged Matrix ---
+
+        function toggleChat() {
+
+            const widget = document.getElementById('chat-widget');
+
+            if (widget.classList.contains('chat-closed')) {
+
+                widget.classList.remove('chat-closed');
+
+                widget.classList.add('chat-open');
+
+            } else {
+
+                widget.classList.remove('chat-open');
+
+                widget.classList.add('chat-closed');
+
+            }
+
+        }
+
+
+
+        function handleEnter(e) { if (e.key === 'Enter') sendMessage(); }
+
+
+
+        function sendMessage() {
+
+            const input = document.getElementById('chat-input');
+
+            const message = input.value.trim();
+
+            if (!message) return;
+
+
+
+            const chatBox = document.getElementById('chat-box');
+
+            const userDiv = document.createElement('div');
+
+            userDiv.className = "bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-2xl rounded-tr-none self-end max-w-[85%] shadow-lg";
+
+            userDiv.innerText = message;
+
+            chatBox.appendChild(userDiv);
+
+            input.value = '';
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+
+
+            setTimeout(() => {
+
+                const botDiv = document.createElement('div');
+
+                botDiv.className = "bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md shadow-lg";
+
+                
+
+                const m = message.toLowerCase();
+
+                let reply = "";
+
+
+
+                if (m.match(/\b(hi|hello|hey|hii|sup|what's up)\b/)) {
+
+                    reply = "Greetings! 👋 Welcome to Sachin's portfolio. How can I assist you today?";
+
+                }
+
+                else if (m.match(/\b(good morning)\b/)) {
+
+                    reply = "Good morning! ☀️ Hope you're having a wonderful day. Feel free to ask about Sachin's skills or projects!";
+
+                }
+
+                else if (m.match(/\b(good evening)\b/)) {
+
+                    reply = "Good evening! 🌙 Ready to explore some stellar code and digital creations?";
+
+                }
+
+                else if (m.match(/\b(good night)\b/)) {
+
+                    reply = "Good night! 🌌 Safe travels across the cosmos. Feel free to leave a message in the contact form before you go!";
+
+                }
+
+                else if (m.match(/\b(how are you|how do you do)\b/)) {
+
+                    reply = "I'm operating at 100% efficiency! Systems nominal across all galaxies. How are you doing?";
+
+                }
+
+                else if (m.match(/\b(who are you|your name|bot|robot|real)\b/)) {
+
+                    reply = "I'm Sachin's AI assistant probe, built to guide visitors through his digital portfolio! 🤖✨";
+
+                }
+
+                else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
+
+                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist experienced in REST APIs, database management, and data analytics. He graduated from LPU and is based in Ludhiana, Punjab.";
+
+                }
+
+                else if (m.match(/\b(thank you|thanks|thx)\b/)) {
+
+                    reply = "You're very welcome! Let me know if you need anything else. 🚀";
+
+                }
+
+                else if (m.match(/\b(bye|goodbye|see you|cya)\b/)) {
+
+                    reply = "Goodbye! Have a great day, and feel free to connect with Sachin via email or LinkedIn!";
+
+                }
+
+                else if (m.match(/\b(help|what can you do)\b/)) {
+
+                    reply = "I can answer questions about Sachin's work experience, tech stack, projects, education, languages, or how to contact him!";
+
+                }
+
+                else if (m.match(/\b(location|where are you from|where are you based|address)\b/)) {
+
+                    reply = "Sachin is based in Ludhiana, Punjab, India 📍";
+
+                }
+
+                else if (m.match(/\b(age|nationality|hobbies)\b/)) {
+
+                    reply = "Sachin is an Indian developer passionate about building secure web applications, exploring machine learning, and space aesthetics!";
+
+                }
+
+                else if (m.match(/\b(languages|speak|bilingual)\b/)) {
+
+                    reply = "Sachin is multilingual and fluent in Hindi, English, Japanese (日本語), Punjabi, and Bengali!";
+
+                }
+
+                else if (m.match(/\b(email|contact|phone)\b/)) {
+
+                    reply = "You can reach Sachin directly via email at sachin25300@gmail.com or use the transmission contact form at the bottom of the page!";
+
+                }
+
+                else if (m.match(/\b(linkedin|github|instagram|social media)\b/)) {
+
+                    reply = "You can check out Sachin's code repositories and professional network via his main links or reach out through his email: sachin25300@gmail.com";
+
+                }
+
+                else if (m.match(/\b(resume|cv|download resume)\b/)) {
+
+                    reply = "You can download Sachin's CV right from the Hero section at the top of the page! 📄";
+
+                }
+
+                else if (m.match(/\b(education|degree|college|university)\b/)) {
+
+                    reply = "Sachin earned his B.Tech in Computer Science and Engineering from Lovely Professional University (2021 - 2025). 🎓";
+
+                }
+
+                else if (m.match(/\b(skills|tech stack|technologies|programming languages|web development|data science|ai|machine learning|database)\b/)) {
+
+                    reply = "Sachin's tech stack includes Java, Python, JavaScript, R, SQL, HTML/CSS, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, Flask, and Database Management.";
+
+                }
+
+                else if (m.match(/\b(projects|show projects|live projects)\b/)) {
+
+                    reply = "Key projects include: PMS Tracker (Flask/Python), Fake Logo Detector (TensorFlow), QR Scam Detector, and a full-stack Event Management System. Scroll up to view them in Digital Creations!";
+
+                }
+
+                else if (m.match(/\b(experience|internship|certificates|achievements|current job|availability|job role)\b/)) {
+
+                    reply = "Sachin is currently in ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and DSA from Amazon.";
+
+                }
+
+                else if (m.match(/\b(hire me|looking for a job|salary expectation|remote job|relocation|visa sponsorship)\b/)) {
+
+                    reply = "Sachin is open to exciting software development and data analytics opportunities! You can contact him directly at sachin25300@gmail.com to discuss roles.";
+
+                }
+
+                else if (m.match(/\b(tell me a joke)\b/)) {
+
+                    reply = "Why do programmers prefer dark mode? Because light attracts bugs! 🐛💡";
+
+                }
+
+                else if (m.match(/\b(motivate me)\b/)) {
+
+                    reply = "“The best way to predict the future is to invent it.” Keep pushing forward, pilot! 🚀";
+
+                }
+
+                else if (m.match(/\b(surprise me)\b/)) {
+
+                    reply = "Did you notice your profile picture and name flip automatically with time? Check out the Hero section! ✨";
+
+                }
+
+                else if (m.match(/\b(who created you|secret|easter egg)\b/)) {
+
+                    reply = "I was forged in the digital cosmos by Sachin Kumar himself! 🌌";
+
+                }
+
+                else if (m.match(/\b(time|date|weather)\b/)) {
+
+                    reply = "Current cosmic time is active. All systems are running smoothly in Ludhiana, Punjab! 🌤️";
+
+                }
+
+                else if (m.match(/\b(clear chat|restart|ping|status)\b/)) {
+
+                    reply = "Pong! 🏓 All systems operational, communication channels clear and secure.";
+
+                }
+
+                else {
+
+                    const fallbacks = [
+
+                        "Transmission unclear! But you can ask me about Sachin's skills, experience, projects, or how to contact him.",
+
+                        "I'm still processing that. Try asking about Sachin's education, certifications, or tech stack!",
+
+                        "I don't have the exact data on that, but you can definitely ask me about his work history or download his CV.",
+
+                        "My sensors didn't catch that. Want to know about the projects he has built?"
+
+                    ];
+
+                    reply = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+
+                }
+
+                
+
+                botDiv.innerText = reply;
+
+                chatBox.appendChild(botDiv);
+
+                chatBox.scrollTop = chatBox.scrollHeight;
+
+            }, 700); 
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+this add that
+
+Your full portfolio code is now fully updated, complete with the clean galaxy design, the interactive AI chat widget, the Formspree contact form backend, and the Ice Bear logo element configured in your navbar and about section.
+
+You can copy and paste this complete code directly into your index.html file, commit it to GitHub, and your live site will be ready to go:
+
+HTML
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Kumar | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Galaxy Theme Base */
+        body {
+            background-color: #05010f;
+            color: #e2e8f0;
+        }
+
+        /* Animated Nebula Clouds */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 15s infinite alternate; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        /* Zero-Gravity Floating Effect */
+        .floating { animation: float 6s ease-in-out infinite; }
+        .floating-delayed { animation: float 6s ease-in-out 3s infinite; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(168, 85, 247, 0.6);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.2);
+        }
+
+        /* ICE BREEZE SNOWY EFFECT FOR CERTIFICATIONS, EDUCATION & LANGUAGES */
+        .ice-breeze-card {
+            background: rgba(186, 230, 253, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.05);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        .ice-breeze-card:hover {
+            border: 1px solid rgba(56, 189, 248, 0.8);
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4), inset 0 0 25px rgba(56, 189, 248, 0.2);
+            transform: translateY(-4px);
+        }
+        .ice-breeze-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: radial-gradient(2px 2px at 40px 60px, rgba(255,255,255,0.4), rgba(0,0,0,0)), 
+                              radial-gradient(1px 1px at 120px 140px, rgba(56,189,248,0.5), rgba(0,0,0,0)),
+                              radial-gradient(2px 2px at 200px 80px, rgba(255,255,255,0.3), rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 250px 250px;
+            animation: snowfall 12s linear infinite;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        @keyframes snowfall {
+            0% { transform: translateY(0) translateX(0); }
+            100% { transform: translateY(100px) translateX(20px); }
+        }
+        .ice-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Glowing Buttons */
+        .btn-glow {
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+            transform: translateY(-4px) scale(1.02);
+        }
+        
+        /* Heading Hover Effects */
+        .hover-heading {
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            cursor: default;
+        }
+        .hover-heading:hover {
+            transform: scale(1.05) translateY(-2px);
+            color: #d8b4fe; 
+            text-shadow: 0 4px 20px rgba(168, 85, 247, 0.6);
+        }
+        
+        /* Flight Path Map */
+        .flight-path {
+            position: relative;
+            height: 250px;
+            background: radial-gradient(ellipse at center, rgba(30,10,60,0.8) 0%, rgba(5,1,15,1) 100%);
+            border-radius: 1rem;
+            margin-top: 2rem;
+            overflow: hidden;
+            border: 2px solid rgba(168, 85, 247, 0.5); 
+            box-shadow: inset 0 0 30px rgba(168,85,247,0.2);
+        }
+        .plane {
+            position: absolute;
+            font-size: 2.5rem;
+            transition: all 2.5s ease-in-out;
+            z-index: 10;
+            filter: drop-shadow(0px 5px 10px rgba(168,85,247,0.8));
+            pointer-events: none;
+        }
+        
+        .path-line {
+            position: absolute;
+            color: #d8b4fe;
+            font-size: 1.5rem;
+            opacity: 0.5;
+            z-index: 5;
+            animation: pulsePath 2s infinite;
+        }
+        @keyframes pulsePath {
+            0%, 100% { opacity: 0.2; transform: translateX(0); }
+            50% { opacity: 0.9; transform: translateX(8px); text-shadow: 0 0 10px #d8b4fe; }
+        }
+
+        .node {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: #a855f7; 
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.9);
+            transition: all 0.3s ease;
+            animation: pulseNode 2s infinite;
+            border: 2px solid #fff;
+            z-index: 20;
+        }
+        .node:hover {
+            transform: translate(-50%, -50%) scale(1.5);
+            background: #e9d5ff;
+            animation: none;
+        }
+        @keyframes pulseNode {
+            0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
+        }
+        .node-label {
+            position: absolute;
+            font-weight: 800;
+            color: #f8fafc; 
+            transform: translate(-50%, 30px);
+            text-align: center;
+            white-space: nowrap; 
+            pointer-events: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Chat Widget */
+        #chat-widget {
+            transition: all 0.3s ease;
+            transform-origin: bottom right;
+        }
+        .chat-open { transform: scale(1); opacity: 1; pointer-events: all; }
+        .chat-closed { transform: scale(0); opacity: 0; pointer-events: none; }
+        
+        .gradient-btn {
+            background: linear-gradient(135deg, #a855f7, #ec4899, #6366f1);
+            background-size: 300% 300%;
+            animation: gradientMove 4s ease infinite;
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 3D Flip Card Container Styles */
+        .profile-container {
+            perspective: 1000px;
+            width: 320px;
+            height: 320px;
+        }
+        .profile-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+        .profile-card-front, .profile-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+        .profile-card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Snow Effect Animation Styles for Projects Section */
+        .snow-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: inherit;
+            z-index: 1;
+        }
+        .snowflake {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: snowfall linear infinite;
+        }
+        .project-content {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased relative">
+
+    <!-- Fixed Cosmic/Cloud Background -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 90px 40px, #ddd, rgba(0,0,0,0)); background-size: 200px 200px;"></div>
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/30 blur-[120px] rounded-full animate-blob"></div>
+        <div class="absolute top-[30%] right-[-10%] w-[40%] h-[60%] bg-indigo-600/20 blur-[150px] rounded-full animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[50%] bg-fuchsia-600/20 blur-[120px] rounded-full animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#05010f]/60 backdrop-blur-xl shadow-lg z-40 border-b border-purple-500/20">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Ice Bear Custom Logo Navbar Header -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center shadow-lg border-2 border-slate-400 group-hover:scale-105 transition-transform overflow-hidden relative" title="Ice Bear">
+                    <div class="absolute top-3 w-1.5 h-1.5 bg-slate-900 rounded-full left-2.5"></div>
+                    <div class="absolute top-3 w-1.5 h-1.5 bg-slate-900 rounded-full right-2.5"></div>
+                    <div class="absolute top-4 w-2 h-1 bg-slate-900 rounded-full"></div>
+                    <span class="text-xs font-black text-slate-800 tracking-tighter">ICE</span>
+                </div>
+                <h1 class="text-2xl font-extrabold text-purple-400 tracking-widest uppercase">Sachin</h1>
+            </a>
+            <div class="space-x-6 hidden md:flex font-semibold text-gray-300">
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+                <a href="#journey" class="hover:text-purple-400 transition">Journey</a>
+                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 min-h-[90vh]">
+        <div class="md:w-1/2 text-center md:text-left z-10">
+            <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 hover-heading drop-shadow-2xl">
+                Hi, I'm <span id="name-flip" class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 transition-opacity duration-500">Sachin</span>
+            </h2>
+            <p class="text-lg md:text-2xl text-gray-300 mb-8 leading-relaxed font-light">
+                Software Developer & ERP Support Specialist exploring REST APIs, Big Data, and digital innovation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start mb-8">
+                <a href="#projects" class="gradient-btn group px-8 py-4 text-white font-bold rounded-full flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(168,85,247,0.5)]">
+                    Explore Cosmos 
+                    <span class="group-hover:translate-x-2 transition-transform duration-300">🚀</span>
+                </a>
+                
+                <a href="SachinCV.pdf" download onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+                    Download CV 📄
+                </a>
+            </div>
+            <div class="flex gap-6 justify-center md:justify-start text-sm text-purple-200 font-medium glass-card inline-flex px-6 py-3 rounded-full">
+                <p><i class="fa-solid fa-location-dot text-pink-400 mr-2"></i> Ludhiana, Punjab</p>
+                <p><i class="fa-solid fa-envelope text-pink-400 mr-2"></i> sachin25300@gmail.com</p>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center relative">
+            <div class="absolute inset-0 bg-fuchsia-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
+            <!-- 3D Flipping Profile Picture Container -->
+            <div class="profile-container floating relative z-10 cursor-pointer">
+                <div id="profile-card-inner" class="profile-card-inner shadow-[0_0_50px_rgba(168,85,247,0.6)] rounded-full border-4 border-purple-400/50">
+                    <div class="profile-card-front">
+                        <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?q=80&w=800&auto=format&fit=crop" alt="Mandalorian Profile" class="w-full h-full object-cover">
+                    </div>
+                    <div class="profile-card-back">
+                        <img src="https://i.pinimg.com/236x/cb/62/80/cb62802e4a44b39873a4eacc8dd5bbec.jpg" alt="We Bare Bears Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey Map & Floating Experience Cards -->
+    <section id="journey" class="py-20 px-4 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">My Career Orbit 🪐</h3>
+                <p class="text-purple-300 mt-3 font-light">Click a constellation to travel there instantly!</p>
+            </div>
+            
+            <div class="flight-path floating-delayed">
+                <div class="path-line" style="left: 30%; top: 48%; transform: rotate(-45deg);">➔</div>
+                <div class="path-line" style="left: 65%; top: 38%; transform: rotate(20deg);">➔</div>
+
+                <div class="node" style="left: 15%; top: 70%;" onclick="highlightCard('pune')">
+                    <span class="node-label">Pune<br><span class="text-sm text-pink-400 font-bold">Kumar Fabricators</span></span>
+                </div>
+                
+                <div class="node" style="left: 50%; top: 30%;" onclick="highlightCard('hhp')">
+                    <span class="node-label">Noida<br><span class="text-sm text-pink-400 font-bold">HHP Software</span></span>
+                </div>
+
+                <div class="node" style="left: 85%; top: 50%;" onclick="highlightCard('dainik')">
+                    <span class="absolute -top-12 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-4 py-1.5 rounded-full whitespace-nowrap font-bold shadow-[0_0_15px_rgba(236,72,153,0.8)] animate-pulse pointer-events-none">
+                        📍 Current Base
+                    </span>
+                    <span class="node-label">Noida<br><span class="text-sm text-pink-400 font-bold">Dainik Jagran</span></span>
+                </div>
+
+                <div id="airplane" class="plane" style="left: 0%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); opacity: 0;">🚀</div>
+            </div>
+
+            <!-- Experience Cards -->
+            <div class="grid lg:grid-cols-3 gap-8 mt-16">
+                <div id="card-pune" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-chart-pie text-pink-400"></i> Data Analyst</h4>
+                    <p class="text-purple-300 font-bold mb-4">Kumar Fabricators (Pune)</p>
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+                        <li>Developed interactive dashboards for real-time monitoring.</li>
+                        <li>Designed predictive models to estimate project timelines, improving accuracy by 20%.</li>
+                        <li>Leveraged big data analytics driving a 15% improvement in operational efficiency.</li>
+                    </ul>
+                </div>
+
+                <div id="card-hhp" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-code text-pink-400"></i> Software Dev</h4>
+                    <p class="text-purple-300 font-bold mb-4">HHP Software (Noida)</p>
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+                        <li>Led enhancement of software testing methodologies, resulting in a 15% increase in efficiency.</li>
+                        <li>Identified and documented bugs significantly improving UX and reliability.</li>
+                    </ul>
+                </div>
+
+                <div id="card-dainik" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-server text-pink-400"></i> ERP Support</h4>
+                    <p class="text-purple-300 font-bold mb-4">Dainik Jagran (Noida) <br><span class="text-xs text-gray-400 font-normal">July 2026 - Present</span></p>
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+                        <li>Provided tech support handling database ops, REST API integration, and troubleshooting.</li>
+                        <li>Performed application testing and collaborated on microservices issues.</li>
+                        <li>Managed records and role-based permissions ensuring 100% data accuracy for 100+ users.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Creations Section -->
+    <section id="projects" class="py-20 px-4 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">Digital Creations 🌠</h3>
+                <p class="text-purple-300 mt-2 font-light">Explore missions and innovative applications developed across galaxies.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- PMS Tracker -->
+                <div class="glass-card rounded-3xl p-8 floating group relative overflow-hidden">
+                    <div class="snow-container">
+                        <div class="snowflake" style="left: 10%; width: 4px; height: 4px; animation-duration: 3s; animation-delay: 0s;"></div>
+                        <div class="snowflake" style="left: 40%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 1s;"></div>
+                        <div class="snowflake" style="left: 70%; width: 3px; height: 3px; animation-duration: 3.5s; animation-delay: 2s;"></div>
+                        <div class="snowflake" style="left: 90%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.5s;"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">PMS Tracker</h4>
+                            <span class="text-xs px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full font-semibold border border-pink-500/30">Health Tech</span>
+                        </div>
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">Python • Flask • Celery</p>
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Engineered a comprehensive web app using Flask to enable users to track and manage premenstrual symptoms. Integrated advanced authentication protocols with Flask-Login ensuring a 100% secure user data management system. Automated notification systems using Celery and Redis, reducing manual intervention by 40%.</p>
+                    </div>
+                </div>
+
+                <!-- Fake Logo Detector -->
+                <div class="glass-card rounded-3xl p-8 floating-delayed group relative overflow-hidden">
+                    <div class="snow-container">
+                        <div class="snowflake" style="left: 20%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.8s;"></div>
+                        <div class="snowflake" style="left: 50%; width: 4px; height: 4px; animation-duration: 3.2s; animation-delay: 0.2s;"></div>
+                        <div class="snowflake" style="left: 80%; width: 6px; height: 6px; animation-duration: 5s; animation-delay: 1.5s;"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Fake Logo Detector</h4>
+                            <span class="text-xs px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full font-semibold border border-purple-500/30">AI / ML</span>
+                        </div>
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">TensorFlow • R • Python</p>
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Designed and deployed a highly accurate logo detection model using TensorFlow, achieving a 92% detection accuracy. Leveraged R for advanced regression modeling to refine detection capabilities, improving precision by 20%.</p>
+                    </div>
+                </div>
+
+                <!-- QR Scam Detector -->
+                <div class="glass-card rounded-3xl p-8 floating group relative overflow-hidden" style="animation-delay: 1.5s;">
+                    <div class="snow-container">
+                        <div class="snowflake" style="left: 15%; width: 4px; height: 4px; animation-duration: 3.8s; animation-delay: 1.2s;"></div>
+                        <div class="snowflake" style="left: 45%; width: 5px; height: 5px; animation-duration: 4.2s; animation-delay: 0.3s;"></div>
+                        <div class="snowflake" style="left: 85%; width: 3px; height: 3px; animation-duration: 3s; animation-delay: 2.2s;"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">QR Scam Detector</h4>
+                            <span class="text-xs px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full font-semibold border border-indigo-500/30">Cyber Security</span>
+                        </div>
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">ML • Python • Security</p>
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Developed a robust scanning tool to identify and block malicious or phishing QR codes in real-time, significantly enhancing user data security and preventing cyber fraud across web platforms.</p>
+                    </div>
+                </div>
+
+                <!-- Event Management System -->
+                <div class="glass-card rounded-3xl p-8 floating-delayed group relative overflow-hidden" style="animation-delay: 2.5s;">
+                    <div class="snow-container">
+                        <div class="snowflake" style="left: 30%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 0.5s;"></div>
+                        <div class="snowflake" style="left: 65%; width: 4px; height: 4px; animation-duration: 3.5s; animation-delay: 1.8s;"></div>
+                        <div class="snowflake" style="left: 95%; width: 5px; height: 5px; animation-duration: 4.1s; animation-delay: 1s;"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Event Management</h4>
+                            <span class="text-xs px-3 py-1 bg-fuchsia-500/20 text-fuchsia-300 rounded-full font-semibold border border-fuchsia-500/30">Full Stack</span>
+                        </div>
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">Java • React • REST APIs</p>
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+                        <p class="text-gray-300 text-sm leading-relaxed">Designed a comprehensive platform for organizing and scheduling events, featuring seamless user registration, ticketing capabilities, and real-time dashboard analytics for event hosts and attendees.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="pt-20 pb-10 px-4 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">Tech Arsenal 🛠️</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Languages -->
+                <div class="glass-card rounded-3xl p-8 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Languages</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Java</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">JavaScript</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Python</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">R</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="glass-card rounded-3xl p-8 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Frameworks</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">HTML/CSS</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Bootstrap</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Hadoop</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Selenium</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Oracle</span>
+                    </div>
+                </div>
+
+                <!-- Core Skills -->
+                <div class="glass-card rounded-3xl p-8 group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Core Skills</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Algorithms</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Testing</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Web Design</span>
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Tableau</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glowing Visual Break Line -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent my-24"></div>
+
+            <!-- Certs, Edu & Spoken Languages WITH ICE BREEZE SNOWY EFFECT -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Certifications (Ice Breeze) -->
+                <div class="ice-breeze-card p-8 rounded-3xl">
+                    <div class="ice-content">
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Certifications</h3>
+                        <ul class="space-y-4 text-sm text-sky-100">
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>DAG Authoring for Apache Airflow 3</strong> (Feb 2026)</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>Computer Graphics and Visualization</strong> - Univ. of Tokyo (Nov 2024)</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>The Complete Theory of Computation</strong> (Sep 2023)</span></li>
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>Data Structures and Algorithms</strong> - Amazon Jr Software Dev (Dec 2022)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Education (Ice Breeze) -->
+                <div class="ice-breeze-card p-8 rounded-3xl">
+                    <div class="ice-content">
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Education</h3>
+                        <h4 class="text-xl font-bold text-white">Lovely Professional University</h4>
+                        <p class="text-sky-300 font-bold mb-2">Phagwara, Punjab</p>
+                        <p class="text-sky-100 font-light mt-4">B.Tech - Computer Science and Engineering</p>
+                        <p class="text-sky-400 text-sm mt-1">2021 - 2025</p>
+                    </div>
+                </div>
+
+                <!-- Languages (Ice Breeze) -->
+                <div class="ice-breeze-card p-8 rounded-3xl">
+                    <div class="ice-content">
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Languages</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Hindi</span>
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">English</span>
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Japanese</span>
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Punjabi</span>
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Bengali</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Formspree Endpoint -->
+    <section id="contact" class="py-24 px-4 relative z-10">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 glass-card p-12 rounded-[3rem] relative">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h3 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">Make Contact 📡</h3>
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed font-light">
+                    Ready to launch a new project or discuss tech innovations? Transmit a message.
+                </p>
+                <div class="space-y-6 text-lg font-bold text-gray-200">
+                    <p class="flex items-center justify-center md:justify-start gap-4">
+                        <span class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400"><i class="fa-solid fa-envelope"></i></span> 
+                        sachin25300@gmail.com
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-4">
+                        <span class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400"><i class="fa-solid fa-location-dot"></i></span> 
+                        Ludhiana, Punjab
+                    </p>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 w-full">
+                <form id="contact-form" action="https://formspree.io/f/mvkzljln" method="POST" class="space-y-6" onsubmit="handleContactSubmit(event)">
+                    <div>
+                        <input type="text" name="name" id="contact-name" placeholder="Pilot Name" required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 backdrop-blur-md">
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="contact-email" placeholder="Comms Channel (Email)" required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 backdrop-blur-md">
+                    </div>
+                    <div>
+                        <textarea name="message" id="contact-msg" rows="4" placeholder="Transmission Log..." required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 resize-none backdrop-blur-md"></textarea>
+                    </div>
+                    <button type="submit" class="gradient-btn w-full text-white font-bold text-xl py-4 rounded-2xl shadow-[0_0_30px_rgba(236,72,153,0.4)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-[1.02] transition-all duration-300">
+                        Transmit <i class="fa-solid fa-satellite-dish ml-2"></i>
+                    </button>
+                </form>
+                <div id="form-success-banner" class="hidden mt-4 p-4 rounded-2xl bg-emerald-500/20 border border-emerald-500 text-emerald-300 text-center font-bold backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.3)] animate-pulse">
+                    Transmission Successful! 🚀 Your message has been beamed to Sachin.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 backdrop-blur-md text-gray-500 text-center py-8 border-t border-white/5 relative z-10">
+        <p>&copy; 2026 Sachin Kumar. Navigating the digital cosmos. Ice Bear approved. 🧊</p>
+    </footer>
+
+    <!-- Floating AI Chat Assistant -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="toggleChat()" class="gradient-btn w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.6)] text-white text-3xl hover:rotate-12 transition-transform border-2 border-white/20">
+            🤖
+        </button>
+
+        <div id="chat-widget" class="chat-closed absolute bottom-20 right-0 w-80 glass-card rounded-3xl flex flex-col overflow-hidden border-2 border-pink-500/50">
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white font-bold flex justify-between items-center shadow-md">
+                <span>Ycsm</span>
+                <button onclick="toggleChat()" class="text-white hover:text-gray-300 text-xl"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <div id="chat-box" class="p-4 h-64 overflow-y-auto bg-black/60 flex flex-col gap-3 text-sm">
+                <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md">
+                    Greetings! I'm an AI construct loaded with Sachin's data. Ask me about his skills, education, or missions (projects)!
+                </div>
+            </div>
+            <div class="p-3 bg-black/80 border-t border-white/10 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Query..." class="flex-1 outline-none px-4 py-2 text-sm bg-white/5 text-white placeholder-gray-500 rounded-xl border border-white/10 focus:border-pink-500 transition-colors" onkeypress="handleEnter(event)">
+                <button onclick="sendMessage()" class="bg-pink-600 text-white px-4 py-2 rounded-xl hover:bg-pink-500 font-bold shadow-[0_0_15px_rgba(236,72,153,0.5)]"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        async function handleContactSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contact-form');
+            const successBanner = document.getElementById('form-success-banner');
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: { 'Accept': 'json' }
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    successBanner.classList.remove('hidden');
+                    setTimeout(() => {
+                        successBanner.classList.add('hidden');
+                    }, 5000);
+                } else {
+                    alert('Transmission failed. Please try emailing directly at sachin25300@gmail.com');
+                }
+            } catch (error) {
+                alert('Network error. Please try emailing directly at sachin25300@gmail.com');
+            }
+        }
+
+        const nameEl = document.getElementById('name-flip');
+        const cardInner = document.getElementById('profile-card-inner');
+        let isFlipped = false;
+
+        setInterval(() => {
+            nameEl.style.opacity = '0';
+            setTimeout(() => {
+                nameEl.innerText = nameEl.innerText === 'Sachin' ? 'サチン' : 'Sachin';
+                nameEl.style.opacity = '1';
+            }, 250);
+
+            isFlipped = !isFlipped;
+            if (isFlipped) {
+                cardInner.style.transform = 'rotateY(180deg)';
+            } else {
+                cardInner.style.transform = 'rotateY(0deg)';
+            }
+        }, 4000); 
+
+        function highlightCard(id, autoScroll = false) {
+            ['pune', 'hhp', 'dainik'].forEach(cardId => {
+                const card = document.getElementById(`card-${cardId}`);
+                card.classList.remove('border-pink-500', 'shadow-[0_0_30px_rgba(236,72,153,0.3)]', 'scale-[1.02]', 'bg-white/10');
+                card.classList.add('border-purple-500/30');
+            });
+
+            const activeCard = document.getElementById(`card-${id}`);
+            activeCard.classList.remove('border-purple-500/30');
+            activeCard.classList.add('border-pink-500', 'shadow-[0_0_30px_rgba(236,72,153,0.3)]', 'scale-[1.02]', 'bg-white/10');
+
+            if (!autoScroll) {
+                activeCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function runFlightLoop() {
+            const plane = document.getElementById('airplane');
+            plane.style.transition = 'none';
+            plane.style.opacity = '0';
+            plane.style.left = '-10%';
+            plane.style.top = '70%';
+            plane.style.transform = 'translate(-50%, -50%) rotate(-45deg)';
+            
+            setTimeout(() => {
+                plane.style.transition = 'all 2.5s ease-in-out';
+                plane.style.opacity = '1';
+                
+                plane.style.left = '15%';
+                plane.style.top = '70%';
+                highlightCard('pune', true);
+                
+                setTimeout(() => {
+                    plane.style.left = '50%';
+                    plane.style.top = '30%';
+                    plane.style.transform = 'translate(-50%, -50%) rotate(20deg)';
+                    highlightCard('hhp', true);
+                }, 3500);
+
+                setTimeout(() => {
+                    plane.style.left = '85%';
+                    plane.style.top = '50%';
+                    plane.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+                    highlightCard('dainik', true);
+                }, 7000);
+                
+                setTimeout(() => {
+                    plane.style.left = '110%';
+                    plane.style.opacity = '0';
+                }, 10500);
+
+                setTimeout(runFlightLoop, 12000);
+            }, 100);
+        }
+        window.addEventListener('DOMContentLoaded', runFlightLoop);
+
+        function toggleChat() {
+            const widget = document.getElementById('chat-widget');
+            if (widget.classList.contains('chat-closed')) {
+                widget.classList.remove('chat-closed');
+                widget.classList.add('chat-open');
+            } else {
+                widget.classList.remove('chat-open');
+                widget.classList.add('chat-closed');
+            }
+        }
+
+        function handleEnter(e) { if (e.key === 'Enter') sendMessage(); }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            if (!message) return;
+
+            const chatBox = document.getElementById('chat-box');
+            const userDiv = document.createElement('div');
+            userDiv.className = "bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-2xl rounded-tr-none self-end max-w-[85%] shadow-lg";
+            userDiv.innerText = message;
+            chatBox.appendChild(userDiv);
+            input.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            setTimeout(() => {
+                const botDiv = document.createElement('div');
+                botDiv.className = "bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md shadow-lg";
+                
+                const m = message.toLowerCase();
+                let reply = "";
+
+                if (m.match(/\b(hi|hello|hey|hii|sup|what's up)\b/)) {
+                    reply = "Greetings! 👋 Welcome to Sachin's portfolio. How can I assist you today?";
+                }
+                else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
+                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist experienced in REST APIs, database management, and data analytics. He graduated from LPU and is based in Ludhiana, Punjab.";
+                }
+                else if (m.match(/\b(skills|tech stack|technologies|programming languages)\b/)) {
+                    reply = "Sachin's tech stack includes Java, Python, JavaScript, R, SQL, HTML/CSS, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, Flask, and Database Management.";
+                }
+                else if (m.match(/\b(projects|show projects|live projects)\b/)) {
+                    reply = "Key projects include: PMS Tracker (Flask/Python), Fake Logo Detector (TensorFlow), QR Scam Detector, and a full-stack Event Management System. Scroll up to view them in Digital Creations!";
+                }
+                else if (m.match(/\b(experience|internship|certificates|achievements|current job)\b/)) {
+                    reply = "Sachin is currently in ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and DSA from Amazon.";
+                }
+                else {
+                    reply = "That's awesome! Feel free to ask about Sachin's skills, experience, projects, or use the contact form to reach out directly.";
+                }
+                
+                botDiv.innerText = reply;
+                chatBox.appendChild(botDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 700); 
+        }
+    </script>
+</body>
+</html>
+no i want the chrome tab mein jo logo aata waha this ice bear
+
+To put that exact Ice Bear image as the icon in your Chrome tab (known as a favicon), you need to add a single <link> tag inside the <head> section of your HTML code.
+
+Here are the two simple steps to do it:
+
+Step 1: Save the Image
+Save that Ice Bear image into your project folder and name it icebear.jpg (making sure it is right alongside your index.html file and uploaded to your GitHub repository).
+
+Step 2: Add the Favicon Link to your HTML Head
+Open your index.html and paste this line right inside your <head> tags:
+
+HTML
+<link rel="icon" type="image/jpeg" href="icebear.jpg">
+For example, your <head> section should look like this:
+
+HTML
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Kumar | Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="icebear.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- styles... -->
+</head>
+Once you save the file, upload both index.html and icebear.jpg to your GitHub repository, refresh your live portfolio link, and Ice Bear will show up right in your browser tab!
+
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sachin Kumar | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        /* Galaxy Theme Base */
+
+        body {
+
+            background-color: #05010f;
+
+            color: #e2e8f0;
+
+        }
+
+
+
+        /* Animated Nebula Clouds */
+
+        @keyframes blob {
+
+            0% { transform: translate(0px, 0px) scale(1); }
+
+            33% { transform: translate(30px, -50px) scale(1.1); }
+
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+
+            100% { transform: translate(0px, 0px) scale(1); }
+
+        }
+
+        .animate-blob { animation: blob 15s infinite alternate; }
+
+        .animation-delay-2000 { animation-delay: 2s; }
+
+        .animation-delay-4000 { animation-delay: 4s; }
+
+
+
+        /* Zero-Gravity Floating Effect */
+
+        .floating { animation: float 6s ease-in-out infinite; }
+
+        .floating-delayed { animation: float 6s ease-in-out 3s infinite; }
+
+        @keyframes float {
+
+            0% { transform: translateY(0px); }
+
+            50% { transform: translateY(-15px); }
+
+            100% { transform: translateY(0px); }
+
+        }
+
+
+
+        /* Glassmorphism Cards */
+
+        .glass-card {
+
+            background: rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(16px);
+
+            -webkit-backdrop-filter: blur(16px);
+
+            border: 1px solid rgba(168, 85, 247, 0.2);
+
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+        }
+
+        .glass-card:hover {
+
+            border: 1px solid rgba(168, 85, 247, 0.6);
+
+            background: rgba(255, 255, 255, 0.05);
+
+            box-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.2);
+
+        }
+
+
+
+        /* ICE BREEZE SNOWY EFFECT FOR CERTIFICATIONS, EDUCATION & LANGUAGES */
+
+        .ice-breeze-card {
+
+            background: rgba(186, 230, 253, 0.03);
+
+            backdrop-filter: blur(16px);
+
+            -webkit-backdrop-filter: blur(16px);
+
+            border: 1px solid rgba(56, 189, 248, 0.3);
+
+            box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.05);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition: all 0.4s ease;
+
+        }
+
+        .ice-breeze-card:hover {
+
+            border: 1px solid rgba(56, 189, 248, 0.8);
+
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4), inset 0 0 25px rgba(56, 189, 248, 0.2);
+
+            transform: translateY(-4px);
+
+        }
+
+        .ice-breeze-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: -50%;
+
+            left: -50%;
+
+            width: 200%;
+
+            height: 200%;
+
+            background-image: radial-gradient(2px 2px at 40px 60px, rgba(255,255,255,0.4), rgba(0,0,0,0)), 
+
+                              radial-gradient(1px 1px at 120px 140px, rgba(56,189,248,0.5), rgba(0,0,0,0)),
+
+                              radial-gradient(2px 2px at 200px 80px, rgba(255,255,255,0.3), rgba(0,0,0,0));
+
+            background-repeat: repeat;
+
+            background-size: 250px 250px;
+
+            animation: snowfall 12s linear infinite;
+
+            pointer-events: none;
+
+            opacity: 0.6;
+
+        }
+
+        @keyframes snowfall {
+
+            0% { transform: translateY(0) translateX(0); }
+
+            100% { transform: translateY(100px) translateX(20px); }
+
+        }
+
+        .ice-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+
+        /* Glowing Buttons */
+
+        .btn-glow {
+
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+        }
+
+        .btn-glow:hover {
+
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+
+            transform: translateY(-4px) scale(1.02);
+
+        }
+
+        
+
+        /* Heading Hover Effects */
+
+        .hover-heading {
+
+            transition: all 0.3s ease-in-out;
+
+            display: inline-block;
+
+            cursor: default;
+
+        }
+
+        .hover-heading:hover {
+
+            transform: scale(1.05) translateY(-2px);
+
+            color: #d8b4fe; 
+
+            text-shadow: 0 4px 20px rgba(168, 85, 247, 0.6);
+
+        }
+
+        
+
+        /* Flight Path Map */
+
+        .flight-path {
+
+            position: relative;
+
+            height: 250px;
+
+            background: radial-gradient(ellipse at center, rgba(30,10,60,0.8) 0%, rgba(5,1,15,1) 100%);
+
+            border-radius: 1rem;
+
+            margin-top: 2rem;
+
+            overflow: hidden;
+
+            border: 2px solid rgba(168, 85, 247, 0.5); 
+
+            box-shadow: inset 0 0 30px rgba(168,85,247,0.2);
+
+        }
+
+        .plane {
+
+            position: absolute;
+
+            font-size: 2.5rem;
+
+            transition: all 2.5s ease-in-out;
+
+            z-index: 10;
+
+            filter: drop-shadow(0px 5px 10px rgba(168,85,247,0.8));
+
+            pointer-events: none;
+
+        }
+
+        
+
+        .path-line {
+
+            position: absolute;
+
+            color: #d8b4fe;
+
+            font-size: 1.5rem;
+
+            opacity: 0.5;
+
+            z-index: 5;
+
+            animation: pulsePath 2s infinite;
+
+        }
+
+        @keyframes pulsePath {
+
+            0%, 100% { opacity: 0.2; transform: translateX(0); }
+
+            50% { opacity: 0.9; transform: translateX(8px); text-shadow: 0 0 10px #d8b4fe; }
+
+        }
+
+
+
+        .node {
+
+            position: absolute;
+
+            width: 24px;
+
+            height: 24px;
+
+            background: #a855f7; 
+
+            border-radius: 50%;
+
+            cursor: pointer;
+
+            transform: translate(-50%, -50%);
+
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.9);
+
+            transition: all 0.3s ease;
+
+            animation: pulseNode 2s infinite;
+
+            border: 2px solid #fff;
+
+            z-index: 20;
+
+        }
+
+        .node:hover {
+
+            transform: translate(-50%, -50%) scale(1.5);
+
+            background: #e9d5ff;
+
+            animation: none;
+
+        }
+
+        @keyframes pulseNode {
+
+            0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.7); }
+
+            70% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+
+            100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
+
+        }
+
+        .node-label {
+
+            position: absolute;
+
+            font-weight: 800;
+
+            color: #f8fafc; 
+
+            transform: translate(-50%, 30px);
+
+            text-align: center;
+
+            white-space: nowrap; 
+
+            pointer-events: none;
+
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+
+        }
+
+
+
+        /* Chat Widget */
+
+        #chat-widget {
+
+            transition: all 0.3s ease;
+
+            transform-origin: bottom right;
+
+        }
+
+        .chat-open { transform: scale(1); opacity: 1; pointer-events: all; }
+
+        .chat-closed { transform: scale(0); opacity: 0; pointer-events: none; }
+
+        
+
+        .gradient-btn {
+
+            background: linear-gradient(135deg, #a855f7, #ec4899, #6366f1);
+
+            background-size: 300% 300%;
+
+            animation: gradientMove 4s ease infinite;
+
+        }
+
+        @keyframes gradientMove {
+
+            0% { background-position: 0% 50%; }
+
+            50% { background-position: 100% 50%; }
+
+            100% { background-position: 0% 50%; }
+
+        }
+
+
+
+        /* 3D Flip Card Container Styles */
+
+        .profile-container {
+
+            perspective: 1000px;
+
+            width: 320px;
+
+            height: 320px;
+
+        }
+
+        .profile-card-inner {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 100%;
+
+            text-align: center;
+
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+
+            transform-style: preserve-3d;
+
+        }
+
+        .profile-card-front, .profile-card-back {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            backface-visibility: hidden;
+
+            -webkit-backface-visibility: hidden;
+
+            border-radius: 9999px;
+
+            overflow: hidden;
+
+        }
+
+        .profile-card-back {
+
+            transform: rotateY(180deg);
+
+        }
+
+
+
+        /* Snow Effect Animation Styles for Projects Section */
+
+        .snow-container {
+
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            overflow: hidden;
+
+            border-radius: inherit;
+
+            z-index: 1;
+
+        }
+
+        .snowflake {
+
+            position: absolute;
+
+            background: #ffffff;
+
+            border-radius: 50%;
+
+            opacity: 0.8;
+
+            animation: snowfall linear infinite;
+
+        }
+
+        .project-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="font-sans antialiased relative">
+
+
+
+    <!-- Fixed Cosmic/Cloud Background -->
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)), radial-gradient(2px 2px at 90px 40px, #ddd, rgba(0,0,0,0)); background-size: 200px 200px;"></div>
+
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/30 blur-[120px] rounded-full animate-blob"></div>
+
+        <div class="absolute top-[30%] right-[-10%] w-[40%] h-[60%] bg-indigo-600/20 blur-[150px] rounded-full animate-blob animation-delay-2000"></div>
+
+        <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[50%] bg-fuchsia-600/20 blur-[120px] rounded-full animate-blob animation-delay-4000"></div>
+
+    </div>
+
+
+
+    <!-- Navigation -->
+
+    <nav class="fixed w-full bg-[#05010f]/60 backdrop-blur-xl shadow-lg z-40 border-b border-purple-500/20">
+
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+
+            <h1 class="text-2xl font-extrabold text-purple-400 tracking-widest uppercase">Sachin</h1>
+
+            <div class="space-x-6 hidden md:flex font-semibold text-gray-300">
+
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+
+                <a href="#journey" class="hover:text-purple-400 transition">Journey</a>
+
+                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+
+                <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+
+                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Hero Section -->
+
+    <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 min-h-[90vh]">
+
+        <div class="md:w-1/2 text-center md:text-left z-10">
+
+            <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 hover-heading drop-shadow-2xl">
+
+                Hi, I'm <span id="name-flip" class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 transition-opacity duration-500">Sachin</span>
+
+            </h2>
+
+            <p class="text-lg md:text-2xl text-gray-300 mb-8 leading-relaxed font-light">
+
+                Software Developer & ERP Support Specialist exploring REST APIs, Big Data, and digital innovation.
+
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-center md:justify-start mb-8">
+
+                <a href="#projects" class="gradient-btn group px-8 py-4 text-white font-bold rounded-full flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(168,85,247,0.5)]">
+
+                    Explore Cosmos 
+
+                    <span class="group-hover:translate-x-2 transition-transform duration-300">🚀</span>
+
+                </a>
+
+                
+
+<a href="SachinCV.pdf" download onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+
+    Download CV 📄
+
+</a>
+
+                </a>
+
+            </div>
+
+            <div class="flex gap-6 justify-center md:justify-start text-sm text-purple-200 font-medium glass-card inline-flex px-6 py-3 rounded-full">
+
+                <p><i class="fa-solid fa-location-dot text-pink-400 mr-2"></i> Ludhiana, Punjab</p>
+
+                <p><i class="fa-solid fa-envelope text-pink-400 mr-2"></i> sachin25300@gmail.com</p>
+
+            </div>
+
+        </div>
+
+        <div class="md:w-1/2 flex justify-center relative">
+
+            <div class="absolute inset-0 bg-fuchsia-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
+
+            <!-- 3D Flipping Profile Picture Container (Mandalorian <-> Ice Bear) -->
+
+            <div class="profile-container floating relative z-10 cursor-pointer">
+
+                <div id="profile-card-inner" class="profile-card-inner shadow-[0_0_50px_rgba(168,85,247,0.6)] rounded-full border-4 border-purple-400/50">
+
+                    <div class="profile-card-front">
+
+                        <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?q=80&w=800&auto=format&fit=crop" alt="Mandalorian Profile" class="w-full h-full object-cover">
+
+                    </div>
+
+                    <div class="profile-card-back">
+
+                        <img src="https://i.pinimg.com/236x/cb/62/80/cb62802e4a44b39873a4eacc8dd5bbec.jpg" alt="We Bare Bears Profile" class="w-full h-full object-cover">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Career Journey Map & Floating Experience Cards -->
+
+    <section id="journey" class="py-20 px-4 relative z-10">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-12">
+
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">My Career Orbit 🪐</h3>
+
+                <p class="text-purple-300 mt-3 font-light">Click a constellation to travel there instantly!</p>
+
+            </div>
+
+            
+
+            <div class="flight-path floating-delayed">
+
+                <div class="path-line" style="left: 30%; top: 48%; transform: rotate(-45deg);">➔</div>
+
+                <div class="path-line" style="left: 65%; top: 38%; transform: rotate(20deg);">➔</div>
+
+
+
+                <div class="node" style="left: 15%; top: 70%;" onclick="highlightCard('pune')">
+
+                    <span class="node-label">Pune<br><span class="text-sm text-pink-400 font-bold">Kumar Fabricators</span></span>
+
+                </div>
+
+                
+
+                <div class="node" style="left: 50%; top: 30%;" onclick="highlightCard('hhp')">
+
+                    <span class="node-label">Noida<br><span class="text-sm text-pink-400 font-bold">HHP Software</span></span>
+
+                </div>
+
+
+
+                <div class="node" style="left: 85%; top: 50%;" onclick="highlightCard('dainik')">
+
+                    <span class="absolute -top-12 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-4 py-1.5 rounded-full whitespace-nowrap font-bold shadow-[0_0_15px_rgba(236,72,153,0.8)] animate-pulse pointer-events-none">
+
+                        📍 Current Base
+
+                    </span>
+
+                    <span class="node-label">Noida<br><span class="text-sm text-pink-400 font-bold">Dainik Jagran</span></span>
+
+                </div>
+
+
+
+                <div id="airplane" class="plane" style="left: 0%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); opacity: 0;">🚀</div>
+
+            </div>
+
+
+
+            <!-- Glassmorphism Experience Cards -->
+
+            <div class="grid lg:grid-cols-3 gap-8 mt-16">
+
+                <div id="card-pune" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-chart-pie text-pink-400"></i> Data Analyst</h4>
+
+                    <p class="text-purple-300 font-bold mb-4">Kumar Fabricators (Pune)</p>
+
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+
+                        <li>Developed interactive dashboards for real-time monitoring.</li>
+
+                        <li>Designed predictive models to estimate project timelines, improving accuracy by 20%.</li>
+
+                        <li>Leveraged big data analytics driving a 15% improvement in operational efficiency.</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div id="card-hhp" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-code text-pink-400"></i> Software Dev</h4>
+
+                    <p class="text-purple-300 font-bold mb-4">HHP Software (Noida)</p>
+
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+
+                        <li>Led enhancement of software testing methodologies, resulting in a 15% increase in efficiency.</li>
+
+                        <li>Identified and documented bugs significantly improving UX and reliability.</li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div id="card-dainik" class="glass-card p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
+
+                    <h4 class="text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-server text-pink-400"></i> ERP Support</h4>
+
+                    <p class="text-purple-300 font-bold mb-4">Dainik Jagran (Noida) <br><span class="text-xs text-gray-400 font-normal">July 2026 - Present</span></p>
+
+                    <ul class='list-disc list-inside space-y-3 text-gray-300 text-sm leading-relaxed'>
+
+                        <li>Provided tech support handling database ops, REST API integration, and troubleshooting.</li>
+
+                        <li>Performed application testing and collaborated on microservices issues.</li>
+
+                        <li>Managed records and role-based permissions ensuring 100% data accuracy for 100+ users.</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Digital Creations Section (Direct Display with Snow Effect) -->
+
+    <section id="projects" class="py-20 px-4 relative z-10">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">Digital Creations 🌠</h3>
+
+                <p class="text-purple-300 mt-2 font-light">Explore missions and innovative applications developed across galaxies.</p>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- PMS Tracker -->
+
+                <div class="glass-card rounded-3xl p-8 floating group relative overflow-hidden">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 10%; width: 4px; height: 4px; animation-duration: 3s; animation-delay: 0s;"></div>
+
+                        <div class="snowflake" style="left: 40%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 1s;"></div>
+
+                        <div class="snowflake" style="left: 70%; width: 3px; height: 3px; animation-duration: 3.5s; animation-delay: 2s;"></div>
+
+                        <div class="snowflake" style="left: 90%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.5s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">PMS Tracker</h4>
+
+                            <span class="text-xs px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full font-semibold border border-pink-500/30">Health Tech</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">Python • Flask • Celery</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Engineered a comprehensive web app using Flask to enable users to track and manage premenstrual symptoms. Integrated advanced authentication protocols with Flask-Login ensuring a 100% secure user data management system. Automated notification systems using Celery and Redis, reducing manual intervention by 40%.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Fake Logo Detector -->
+
+                <div class="glass-card rounded-3xl p-8 floating-delayed group relative overflow-hidden">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 20%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.8s;"></div>
+
+                        <div class="snowflake" style="left: 50%; width: 4px; height: 4px; animation-duration: 3.2s; animation-delay: 0.2s;"></div>
+
+                        <div class="snowflake" style="left: 80%; width: 6px; height: 6px; animation-duration: 5s; animation-delay: 1.5s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Fake Logo Detector</h4>
+
+                            <span class="text-xs px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full font-semibold border border-purple-500/30">AI / ML</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">TensorFlow • R • Python</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Designed and deployed a highly accurate logo detection model using TensorFlow, achieving a 92% detection accuracy. Leveraged R for advanced regression modeling to refine detection capabilities, improving precision by 20%.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- QR Scam Detector -->
+
+                <div class="glass-card rounded-3xl p-8 floating group relative overflow-hidden" style="animation-delay: 1.5s;">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 15%; width: 4px; height: 4px; animation-duration: 3.8s; animation-delay: 1.2s;"></div>
+
+                        <div class="snowflake" style="left: 45%; width: 5px; height: 5px; animation-duration: 4.2s; animation-delay: 0.3s;"></div>
+
+                        <div class="snowflake" style="left: 85%; width: 3px; height: 3px; animation-duration: 3s; animation-delay: 2.2s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">QR Scam Detector</h4>
+
+                            <span class="text-xs px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full font-semibold border border-indigo-500/30">Cyber Security</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">ML • Python • Security</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Developed a robust scanning tool to identify and block malicious or phishing QR codes in real-time, significantly enhancing user data security and preventing cyber fraud across web platforms.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Event Management System -->
+
+                <div class="glass-card rounded-3xl p-8 floating-delayed group relative overflow-hidden" style="animation-delay: 2.5s;">
+
+                    <div class="snow-container">
+
+                        <div class="snowflake" style="left: 30%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 0.5s;"></div>
+
+                        <div class="snowflake" style="left: 65%; width: 4px; height: 4px; animation-duration: 3.5s; animation-delay: 1.8s;"></div>
+
+                        <div class="snowflake" style="left: 95%; width: 5px; height: 5px; animation-duration: 4.1s; animation-delay: 1s;"></div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="flex items-center justify-between mb-2">
+
+                            <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Event Management</h4>
+
+                            <span class="text-xs px-3 py-1 bg-fuchsia-500/20 text-fuchsia-300 rounded-full font-semibold border border-fuchsia-500/30">Full Stack</span>
+
+                        </div>
+
+                        <p class="text-purple-400 font-bold mb-4 text-sm uppercase tracking-wider">Java • React • REST APIs</p>
+
+                        <div class="h-1 w-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
+
+                        <p class="text-gray-300 text-sm leading-relaxed">Designed a comprehensive platform for organizing and scheduling events, featuring seamless user registration, ticketing capabilities, and real-time dashboard analytics for event hosts and attendees.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Technical Skills Section -->
+
+    <section id="skills" class="pt-20 pb-10 px-4 relative z-10">
+
+        <div class="max-w-6xl mx-auto">
+
+            <div class="text-center mb-16">
+
+                <h3 class="text-4xl font-extrabold text-white hover-heading tracking-wide">Tech Arsenal 🛠️</h3>
+
+            </div>
+
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Languages -->
+
+                <div class="glass-card rounded-3xl p-8 group">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Languages</h4>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Java</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">JavaScript</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Python</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">R</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">SQL</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Frameworks -->
+
+                <div class="glass-card rounded-3xl p-8 group">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Frameworks</h4>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">HTML/CSS</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Bootstrap</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Hadoop</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Selenium</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Oracle</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Core Skills -->
+
+                <div class="glass-card rounded-3xl p-8 group">
+
+                    <div class="flex items-center gap-4 mb-6">
+
+                        <div class="w-14 h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+
+                            <i class="fa-solid fa-gears"></i>
+
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors">Core Skills</h4>
+
+                    </div>
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Algorithms</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Testing</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Web Design</span>
+
+                        <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-sm font-bold text-gray-200 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-transparent hover:scale-110 transition-all cursor-default shadow-lg">Tableau</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Glowing Visual Break Line -->
+
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent my-24"></div>
+
+
+
+            <!-- Certs, Edu & Spoken Languages WITH ICE BREEZE SNOWY EFFECT -->
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Certifications (Ice Breeze) -->
+
+                <div class="ice-breeze-card p-8 rounded-3xl">
+
+                    <div class="ice-content">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Certifications</h3>
+
+                        <ul class="space-y-4 text-sm text-sky-100">
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>DAG Authoring for Apache Airflow 3</strong> (Feb 2026)</span></li>
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>Computer Graphics and Visualization</strong> - Univ. of Tokyo (Nov 2024)</span></li>
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>The Complete Theory of Computation</strong> (Sep 2023)</span></li>
+
+                            <li class="flex gap-3"><i class="fa-solid fa-award text-sky-400 mt-1"></i> <span><strong>Data Structures and Algorithms</strong> - Amazon Jr Software Dev (Dec 2022)</span></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                
+
+                <!-- Education (Ice Breeze) -->
+
+                <div class="ice-breeze-card p-8 rounded-3xl">
+
+                    <div class="ice-content">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Education</h3>
+
+                        <h4 class="text-xl font-bold text-white">Lovely Professional University</h4>
+
+                        <p class="text-sky-300 font-bold mb-2">Phagwara, Punjab</p>
+
+                        <p class="text-sky-100 font-light mt-4">B.Tech - Computer Science and Engineering</p>
+
+                        <p class="text-sky-400 text-sm mt-1">2021 - 2025</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Languages (Ice Breeze) -->
+
+                <div class="ice-breeze-card p-8 rounded-3xl">
+
+                    <div class="ice-content">
+
+                        <h3 class="text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Languages</h3>
+
+                        <div class="flex flex-wrap gap-3">
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Hindi</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">English</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Japanese</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Punjabi</span>
+
+                            <span class="px-4 py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Bengali</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Glassmorphism Contact Section with LIVE Formspree Backend -->
+
+    <section id="contact" class="py-24 px-4 relative z-10">
+
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 glass-card p-12 rounded-[3rem] relative">
+
+            <div class="md:w-1/2 text-center md:text-left">
+
+                <h3 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">Make Contact 📡</h3>
+
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed font-light">
+
+                    Ready to launch a new project or discuss tech innovations? Transmit a message.
+
+                </p>
+
+                <div class="space-y-6 text-lg font-bold text-gray-200">
+
+                    <p class="flex items-center justify-center md:justify-start gap-4">
+
+                        <span class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400"><i class="fa-solid fa-envelope"></i></span> 
+
+                        sachin25300@gmail.com
+
+                    </p>
+
+                    <p class="flex items-center justify-center md:justify-start gap-4">
+
+                        <span class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400"><i class="fa-solid fa-location-dot"></i></span> 
+
+                        Ludhiana, Punjab
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="md:w-1/2 w-full">
+
+                <!-- Connected Formspree Form Action Endpoint -->
+
+                <form id="contact-form" action="https://formspree.io/f/maeqvgke" method="POST" class="space-y-6" onsubmit="handleContactSubmit(event)">
+
+                    <div>
+
+                        <input type="text" name="name" id="contact-name" placeholder="Pilot Name" required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 backdrop-blur-md">
+
+                    </div>
+
+                    <div>
+
+                        <input type="email" name="email" id="contact-email" placeholder="Comms Channel (Email)" required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 backdrop-blur-md">
+
+                    </div>
+
+                    <div>
+
+                        <textarea name="message" id="contact-msg" rows="4" placeholder="Transmission Log..." required class="w-full px-5 py-4 rounded-2xl border border-white/10 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all bg-black/40 text-white placeholder-gray-500 resize-none backdrop-blur-md"></textarea>
+
+                    </div>
+
+                    <button type="submit" class="gradient-btn w-full text-white font-bold text-xl py-4 rounded-2xl shadow-[0_0_30px_rgba(236,72,153,0.4)] hover:shadow-[0_0_40px_rgba(236,72,153,0.8)] hover:scale-[1.02] transition-all duration-300">
+
+                        Transmit <i class="fa-solid fa-satellite-dish ml-2"></i>
+
+                    </button>
+
+                </form>
+
+                <!-- Success Popup Banner -->
+
+                <div id="form-success-banner" class="hidden mt-4 p-4 rounded-2xl bg-emerald-500/20 border border-emerald-500 text-emerald-300 text-center font-bold backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.3)] animate-pulse">
+
+                    Transmission Successful! 🚀 Your message has been beamed to Sachin.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="bg-black/80 backdrop-blur-md text-gray-500 text-center py-8 border-t border-white/5 relative z-10">
+
+        <p>&copy; 2026 Sachin Kumar. Navigating the digital cosmos.</p>
+
+    </footer>
+
+
+
+    <!-- Floating AI Chat Assistant -->
+
+    <div class="fixed bottom-6 right-6 z-50">
+
+        <button onclick="toggleChat()" class="gradient-btn w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.6)] text-white text-3xl hover:rotate-12 transition-transform border-2 border-white/20">
+
+            🤖
+
+        </button>
+
+
+
+        <div id="chat-widget" class="chat-closed absolute bottom-20 right-0 w-80 glass-card rounded-3xl flex flex-col overflow-hidden border-2 border-pink-500/50">
+
+            <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white font-bold flex justify-between items-center shadow-md">
+
+                <span>Ycsm</span>
+
+                <button onclick="toggleChat()" class="text-white hover:text-gray-300 text-xl"><i class="fa-solid fa-times"></i></button>
+
+            </div>
+
+            <div id="chat-box" class="p-4 h-64 overflow-y-auto bg-black/60 flex flex-col gap-3 text-sm">
+
+                <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md">
+
+                    Greetings! I'm an AI construct loaded with Sachin's data. Ask me about his skills, education, or missions (projects)!
+
+                </div>
+
+            </div>
+
+            <div class="p-3 bg-black/80 border-t border-white/10 flex gap-2">
+
+                <input type="text" id="chat-input" placeholder="Query..." class="flex-1 outline-none px-4 py-2 text-sm bg-white/5 text-white placeholder-gray-500 rounded-xl border border-white/10 focus:border-pink-500 transition-colors" onkeypress="handleEnter(event)">
+
+                <button onclick="sendMessage()" class="bg-pink-600 text-white px-4 py-2 rounded-xl hover:bg-pink-500 font-bold shadow-[0_0_15px_rgba(236,72,153,0.5)]"><i class="fa-solid fa-paper-plane"></i></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Scripts -->
+
+    <script>
+
+        // --- Live Formspree Email Sending & Confirmation Banner Logic ---
+
+        async function handleContactSubmit(e) {
+
+            e.preventDefault();
+
+            const form = document.getElementById('contact-form');
+
+            const successBanner = document.getElementById('form-success-banner');
+
+            const formData = new FormData(form);
+
+
+
+            try {
+
+                const response = await fetch(form.action, {
+
+                    method: form.method,
+
+                    body: formData,
+
+                    headers: { 'Accept': 'json' }
+
+                });
+
+
+
+                if (response.ok) {
+
+                    form.reset();
+
+                    successBanner.classList.remove('hidden');
+
+                    setTimeout(() => {
+
+                        successBanner.classList.add('hidden');
+
+                    }, 5000);
+
+                } else {
+
+                    alert('Transmission failed. Please try emailing directly at sachin25300@gmail.com');
+
+                }
+
+            } catch (error) {
+
+                alert('Network error. Please try emailing directly at sachin25300@gmail.com');
+
+            }
+
+        }
+
+
+
+        // --- Name & 3D Profile Card Flip Animation Logic ---
+
+        const nameEl = document.getElementById('name-flip');
+
+        const cardInner = document.getElementById('profile-card-inner');
+
+        
+
+        let isFlipped = false;
+
+
+
+        setInterval(() => {
+
+            nameEl.style.opacity = '0';
+
+            
+
+            setTimeout(() => {
+
+                nameEl.innerText = nameEl.innerText === 'Sachin' ? 'サチン' : 'Sachin';
+
+                nameEl.style.opacity = '1';
+
+            }, 250);
+
+
+
+            isFlipped = !isFlipped;
+
+            if (isFlipped) {
+
+                cardInner.style.transform = 'rotateY(180deg)';
+
+            } else {
+
+                cardInner.style.transform = 'rotateY(0deg)';
+
+            }
+
+        }, 4000); 
+
+
+
+        // --- Experience Highlight & Scroll Logic ---
+
+        function highlightCard(id, autoScroll = false) {
+
+            ['pune', 'hhp', 'dainik'].forEach(cardId => {
+
+                const card = document.getElementById(`card-${cardId}`);
+
+                card.classList.remove('border-pink-500', 'shadow-[0_0_30px_rgba(236,72,153,0.3)]', 'scale-[1.02]', 'bg-white/10');
+
+                card.classList.add('border-purple-500/30');
+
+            });
+
+
+
+            const activeCard = document.getElementById(`card-${id}`);
+
+            activeCard.classList.remove('border-purple-500/30');
+
+            activeCard.classList.add('border-pink-500', 'shadow-[0_0_30px_rgba(236,72,153,0.3)]', 'scale-[1.02]', 'bg-white/10');
+
+
+
+            if (!autoScroll) {
+
+                activeCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            }
+
+        }
+
+
+
+        // --- Auto Airplane Background Animation Loop ---
+
+        function runFlightLoop() {
+
+            const plane = document.getElementById('airplane');
+
+            plane.style.transition = 'none';
+
+            plane.style.opacity = '0';
+
+            plane.style.left = '-10%';
+
+            plane.style.top = '70%';
+
+            plane.style.transform = 'translate(-50%, -50%) rotate(-45deg)';
+
+            
+
+            setTimeout(() => {
+
+                plane.style.transition = 'all 2.5s ease-in-out';
+
+                plane.style.opacity = '1';
+
+                
+
+                plane.style.left = '15%';
+
+                plane.style.top = '70%';
+
+                highlightCard('pune', true);
+
+                
+
+                setTimeout(() => {
+
+                    plane.style.left = '50%';
+
+                    plane.style.top = '30%';
+
+                    plane.style.transform = 'translate(-50%, -50%) rotate(20deg)';
+
+                    highlightCard('hhp', true);
+
+                }, 3500);
+
+
+
+                setTimeout(() => {
+
+                    plane.style.left = '85%';
+
+                    plane.style.top = '50%';
+
+                    plane.style.transform = 'translate(-50%, -50%) rotate(0deg)';
+
+                    highlightCard('dainik', true);
+
+                }, 7000);
+
+                
+
+                setTimeout(() => {
+
+                    plane.style.left = '110%';
+
+                    plane.style.opacity = '0';
+
+                }, 10500);
+
+
+
+                setTimeout(runFlightLoop, 12000);
+
+            }, 100);
+
+        }
+
+        window.addEventListener('DOMContentLoaded', runFlightLoop);
+
+
+
+        // --- Smart Chat Widget Logic with Supercharged Matrix ---
+
+        function toggleChat() {
+
+            const widget = document.getElementById('chat-widget');
+
+            if (widget.classList.contains('chat-closed')) {
+
+                widget.classList.remove('chat-closed');
+
+                widget.classList.add('chat-open');
+
+            } else {
+
+                widget.classList.remove('chat-open');
+
+                widget.classList.add('chat-closed');
+
+            }
+
+        }
+
+
+
+        function handleEnter(e) { if (e.key === 'Enter') sendMessage(); }
+
+
+
+        function sendMessage() {
+
+            const input = document.getElementById('chat-input');
+
+            const message = input.value.trim();
+
+            if (!message) return;
+
+
+
+            const chatBox = document.getElementById('chat-box');
+
+            const userDiv = document.createElement('div');
+
+            userDiv.className = "bg-gradient-to-r from-purple-500 to-pink-500 text-white p-3 rounded-2xl rounded-tr-none self-end max-w-[85%] shadow-lg";
+
+            userDiv.innerText = message;
+
+            chatBox.appendChild(userDiv);
+
+            input.value = '';
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+
+
+            setTimeout(() => {
+
+                const botDiv = document.createElement('div');
+
+                botDiv.className = "bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md shadow-lg";
+
+                
+
+                const m = message.toLowerCase();
+
+                let reply = "";
+
+
+
+                if (m.match(/\b(hi|hello|hey|hii|sup|what's up)\b/)) {
+
+                    reply = "Greetings! 👋 Welcome to Sachin's portfolio. How can I assist you today?";
+
+                }
+
+                else if (m.match(/\b(good morning)\b/)) {
+
+                    reply = "Good morning! ☀️ Hope you're having a wonderful day. Feel free to ask about Sachin's skills or projects!";
+
+                }
+
+                else if (m.match(/\b(good evening)\b/)) {
+
+                    reply = "Good evening! 🌙 Ready to explore some stellar code and digital creations?";
+
+                }
+
+                else if (m.match(/\b(good night)\b/)) {
+
+                    reply = "Good night! 🌌 Safe travels across the cosmos. Feel free to leave a message in the contact form before you go!";
+
+                }
+
+                else if (m.match(/\b(how are you|how do you do)\b/)) {
+
+                    reply = "I'm operating at 100% efficiency! Systems nominal across all galaxies. How are you doing?";
+
+                }
+
+                else if (m.match(/\b(who are you|your name|bot|robot|real)\b/)) {
+
+                    reply = "I'm Sachin's AI assistant probe, built to guide visitors through his digital portfolio! 🤖✨";
+
+                }
+
+                else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
+
+                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist experienced in REST APIs, database management, and data analytics. He graduated from LPU and is based in Ludhiana, Punjab.";
+
+                }
+
+                else if (m.match(/\b(thank you|thanks|thx)\b/)) {
+
+                    reply = "You're very welcome! Let me know if you need anything else. 🚀";
+
+                }
+
+                else if (m.match(/\b(bye|goodbye|see you|cya)\b/)) {
+
+                    reply = "Goodbye! Have a great day, and feel free to connect with Sachin via email or LinkedIn!";
+
+                }
+
+                else if (m.match(/\b(help|what can you do)\b/)) {
+
+                    reply = "I can answer questions about Sachin's work experience, tech stack, projects, education, languages, or how to contact him!";
+
+                }
+
+                else if (m.match(/\b(location|where are you from|where are you based|address)\b/)) {
+
+                    reply = "Sachin is based in Ludhiana, Punjab, India 📍";
+
+                }
+
+                else if (m.match(/\b(age|nationality|hobbies)\b/)) {
+
+                    reply = "Sachin is an Indian developer passionate about building secure web applications, exploring machine learning, and space aesthetics!";
+
+                }
+
+                else if (m.match(/\b(languages|speak|bilingual)\b/)) {
+
+                    reply = "Sachin is multilingual and fluent in Hindi, English, Japanese (日本語), Punjabi, and Bengali!";
+
+                }
+
+                else if (m.match(/\b(email|contact|phone)\b/)) {
+
+                    reply = "You can reach Sachin directly via email at sachin25300@gmail.com or use the transmission contact form at the bottom of the page!";
+
+                }
+
+                else if (m.match(/\b(linkedin|github|instagram|social media)\b/)) {
+
+                    reply = "You can check out Sachin's code repositories and professional network via his main links or reach out through his email: sachin25300@gmail.com";
+
+                }
+
+                else if (m.match(/\b(resume|cv|download resume)\b/)) {
+
+                    reply = "You can download Sachin's CV right from the Hero section at the top of the page! 📄";
+
+                }
+
+                else if (m.match(/\b(education|degree|college|university)\b/)) {
+
+                    reply = "Sachin earned his B.Tech in Computer Science and Engineering from Lovely Professional University (2021 - 2025). 🎓";
+
+                }
+
+                else if (m.match(/\b(skills|tech stack|technologies|programming languages|web development|data science|ai|machine learning|database)\b/)) {
+
+                    reply = "Sachin's tech stack includes Java, Python, JavaScript, R, SQL, HTML/CSS, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, Flask, and Database Management.";
+
+                }
+
+                else if (m.match(/\b(projects|show projects|live projects)\b/)) {
+
+                    reply = "Key projects include: PMS Tracker (Flask/Python), Fake Logo Detector (TensorFlow), QR Scam Detector, and a full-stack Event Management System. Scroll up to view them in Digital Creations!";
+
+                }
+
+                else if (m.match(/\b(experience|internship|certificates|achievements|current job|availability|job role)\b/)) {
+
+                    reply = "Sachin is currently in ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and DSA from Amazon.";
+
+                }
+
+                else if (m.match(/\b(hire me|looking for a job|salary expectation|remote job|relocation|visa sponsorship)\b/)) {
+
+                    reply = "Sachin is open to exciting software development and data analytics opportunities! You can contact him directly at sachin25300@gmail.com to discuss roles.";
+
+                }
+
+                else if (m.match(/\b(tell me a joke)\b/)) {
+
+                    reply = "Why do programmers prefer dark mode? Because light attracts bugs! 🐛💡";
+
+                }
+
+                else if (m.match(/\b(motivate me)\b/)) {
+
+                    reply = "“The best way to predict the future is to invent it.” Keep pushing forward, pilot! 🚀";
+
+                }
+
+                else if (m.match(/\b(surprise me)\b/)) {
+
+                    reply = "Did you notice your profile picture and name flip automatically with time? Check out the Hero section! ✨";
+
+                }
+
+                else if (m.match(/\b(who created you|secret|easter egg)\b/)) {
+
+                    reply = "I was forged in the digital cosmos by Sachin Kumar himself! 🌌";
+
+                }
+
+                else if (m.match(/\b(time|date|weather)\b/)) {
+
+                    reply = "Current cosmic time is active. All systems are running smoothly in Ludhiana, Punjab! 🌤️";
+
+                }
+
+                else if (m.match(/\b(clear chat|restart|ping|status)\b/)) {
+
+                    reply = "Pong! 🏓 All systems operational, communication channels clear and secure.";
+
+                }
+
+                else {
+
+                    const fallbacks = [
+
+                        "Transmission unclear! But you can ask me about Sachin's skills, experience, projects, or how to contact him.",
+
+                        "I'm still processing that. Try asking about Sachin's education, certifications, or tech stack!",
+
+                        "I don't have the exact data on that, but you can definitely ask me about his work history or download his CV.",
+
+                        "My sensors didn't catch that. Want to know about the projects he has built?"
+
+                    ];
+
+                    reply = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+
+                }
+
+                
+
+                botDiv.innerText = reply;
+
+                chatBox.appendChild(botDiv);
+
+                chatBox.scrollTop = chatBox.scrollHeight;
+
+            }, 700); 
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+paste it here
+
+HTML
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Kumar | Portfolio</title>
+    <!-- Ice Bear Tab Favicon -->
+    <link rel="icon" type="image/jpeg" href="icebear.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -285,9 +5168,8 @@
                     <span class="group-hover:translate-x-2 transition-transform duration-300">🚀</span>
                 </a>
                 
-<a href="SachinCV.pdf" download onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
-    Download CV 📄
-</a>
+                <a href="SachinCV.pdf" download onclick="return confirm('Do you want to download Sachin Kumar\'s CV?');" class="glass-card px-8 py-4 text-white font-bold rounded-full hover:text-purple-300 hover:border-purple-400 transition-colors">
+                    Download CV 📄
                 </a>
             </div>
             <div class="flex gap-6 justify-center md:justify-start text-sm text-purple-200 font-medium glass-card inline-flex px-6 py-3 rounded-full">
