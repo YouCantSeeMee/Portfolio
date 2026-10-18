@@ -230,7 +230,7 @@
             transform: rotateY(180deg);
         }
 
-        /* Snow Effect Animation Styles for Projects Section */
+        /* Snow Effect Animation Styles */
         .snow-container {
             position: absolute;
             inset: 0;
@@ -271,6 +271,7 @@
                 <a href="#journey" class="hover:text-purple-400 transition">Journey</a>
                 <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
                 <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
+                <a href="#hobbies" class="hover:text-purple-400 transition">Hobbies</a>
                 <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
             </div>
         </div>
@@ -302,21 +303,19 @@
         </div>
         <div class="md:w-1/2 flex flex-col items-center justify-center relative w-full">
             <div class="absolute inset-0 bg-fuchsia-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
-            <!-- 3D Flipping Profile Picture Container using local repo files -->
+            <!-- 3D Flipping Profile Picture Container -->
             <div class="profile-container floating relative z-10 cursor-pointer mb-6">
                 <div id="profile-card-inner" class="profile-card-inner shadow-[0_0_50px_rgba(168,85,247,0.6)] rounded-full border-4 border-purple-400/50">
-                    <!-- Front Image Local File -->
                     <div class="profile-card-front">
                         <img src="profile-pic.jpg" alt="Profile Front" class="w-full h-full object-cover">
                     </div>
-                    <!-- Back Image Local File -->
                     <div class="profile-card-back">
                         <img src="icebear1.jpg" alt="Ice Bear Back" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
 
-            <!-- Live State Weather Widget below Profile Picture (Machida Default) -->
+            <!-- Live State Weather Widget below Profile Picture -->
             <div class="glass-card px-6 py-3 rounded-2xl flex items-center gap-4 relative z-10 border border-purple-500/30 shadow-lg">
                 <div class="flex flex-col">
                     <label for="state-select" class="text-[10px] uppercase tracking-wider text-purple-300 font-semibold mb-1">Select Location 🌍</label>
@@ -371,7 +370,6 @@
             <div id="airplane" class="plane" style="left: 0%; top: 70%; transform: translate(-50%, -50%) rotate(0deg); opacity: 0;">🚀</div>
         </div>
 
-        <!-- Glassmorphism Experience Cards -->
         <div class="grid lg:grid-cols-3 gap-6 sm:gap-8 mt-16">
             <div id="card-pune" class="glass-card p-6 sm:p-8 rounded-3xl transition-all duration-500 scroll-mt-32">
                 <h4 class="text-xl sm:text-2xl font-extrabold text-white mb-2 flex items-center gap-3"><i class="fa-solid fa-chart-pie text-pink-400"></i> Data Analyst</h4>
@@ -411,7 +409,6 @@
             <p class="text-purple-300 mt-2 font-light text-sm sm:text-base">Explore missions and innovative applications developed across galaxies.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
-            <!-- PMS Tracker -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 floating group relative overflow-hidden">
                 <div class="snow-container">
                     <div class="snowflake" style="left: 10%; width: 4px; height: 4px; animation-duration: 3s; animation-delay: 0s;"></div>
@@ -430,7 +427,6 @@
                 </div>
             </div>
 
-            <!-- Fake Logo Detector -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 floating-delayed group relative overflow-hidden">
                 <div class="snow-container">
                     <div class="snowflake" style="left: 20%; width: 5px; height: 5px; animation-duration: 4s; animation-delay: 0.8s;"></div>
@@ -448,7 +444,6 @@
                 </div>
             </div>
 
-            <!-- QR Scam Detector -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 floating group relative overflow-hidden" style="animation-delay: 1.5s;">
                 <div class="snow-container">
                     <div class="snowflake" style="left: 15%; width: 4px; height: 4px; animation-duration: 3.8s; animation-delay: 1.2s;"></div>
@@ -466,7 +461,6 @@
                 </div>
             </div>
 
-            <!-- Event Management System -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 floating-delayed group relative overflow-hidden" style="animation-delay: 2.5s;">
                 <div class="snow-container">
                     <div class="snowflake" style="left: 30%; width: 6px; height: 6px; animation-duration: 4.5s; animation-delay: 0.5s;"></div>
@@ -493,7 +487,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- Languages -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 group">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-xl sm:text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
@@ -510,7 +503,6 @@
                 </div>
             </div>
 
-            <!-- Frameworks -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 group">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-xl sm:text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
@@ -527,7 +519,6 @@
                 </div>
             </div>
 
-            <!-- Core Skills -->
             <div class="glass-card rounded-3xl p-6 sm:p-8 group">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-500/20 flex items-center justify-center text-pink-400 text-xl sm:text-2xl group-hover:bg-pink-500 group-hover:text-white transition-all shadow-[0_0_15px_rgba(168,85,247,0.4)]">
@@ -544,12 +535,10 @@
             </div>
         </div>
 
-        <!-- Glowing Visual Break Line -->
         <div class="w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent my-20"></div>
 
-        <!-- Certs, Edu & Spoken Languages WITH ICE BREEZE SNOWY EFFECT -->
+        <!-- Certs, Edu & Spoken Languages -->
         <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- Certifications -->
             <div class="ice-breeze-card p-6 sm:p-8 rounded-3xl">
                 <div class="ice-content">
                     <h3 class="text-xl sm:text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Certifications</h3>
@@ -562,7 +551,6 @@
                 </div>
             </div>
             
-            <!-- Education -->
             <div class="ice-breeze-card p-6 sm:p-8 rounded-3xl">
                 <div class="ice-content">
                     <h3 class="text-xl sm:text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Education</h3>
@@ -573,7 +561,6 @@
                 </div>
             </div>
 
-            <!-- Languages -->
             <div class="ice-breeze-card p-6 sm:p-8 rounded-3xl">
                 <div class="ice-content">
                     <h3 class="text-xl sm:text-2xl font-bold text-white mb-6 border-b-2 border-sky-400 inline-block pb-2">Languages</h3>
@@ -584,6 +571,77 @@
                         <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-xs sm:text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Punjabi</span>
                         <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-sky-500/10 border border-sky-400/30 rounded-full text-xs sm:text-sm font-bold text-sky-100 hover:bg-sky-400 hover:text-black transition-colors cursor-default shadow-[0_0_10px_rgba(56,189,248,0.2)]">Bengali</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section (Cricket, Singing with Audio, Sketching with Work) -->
+    <section id="hobbies" class="py-20 px-4 relative z-10 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white hover-heading tracking-wide">Passions & Hobbies 🎨🏏🎵</h3>
+            <p class="text-purple-300 mt-2 font-light text-sm sm:text-base">When I'm not writing code or supporting ERP servers, here is what I love doing.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Cricket Hobby -->
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between group hover:border-pink-500 transition-all">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-baseball-bat-ball"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Cricket 🏏</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed">Passionate about playing and watching cricket. Whether it's hitting boundaries or pacing up a bowling spell, the sport teaches strategy, teamwork, and resilience under pressure.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 text-xs text-purple-300 font-semibold uppercase tracking-wider">
+                    Match Ready • Team Player
+                </div>
+            </div>
+
+            <!-- Singing Hobby with Audio Player -->
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between group hover:border-pink-500 transition-all">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Singing 🎤</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">Music is my ultimate creative outlet. Listen to a sample recording of my voice below:</p>
+                    
+                    <!-- Custom Audio Player for Singing File -->
+                    <div class="bg-black/50 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                        <audio controls class="w-full accent-pink-500">
+                            <source src="singing.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <span class="text-[10px] text-gray-400 mt-2 block text-center">🎵 Sample Voice Recording (singing.mp3)</span>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 text-xs text-purple-300 font-semibold uppercase tracking-wider">
+                    Vocal Artistry • Melodies
+                </div>
+            </div>
+
+            <!-- Sketching Hobby with Artwork Gallery -->
+            <div class="glass-card p-8 rounded-3xl flex flex-col justify-between group hover:border-pink-500 transition-all">
+                <div>
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center text-pink-400 text-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3">Sketching & Art ✏️</h4>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">Sketching allows me to visualize ideas and capture imagination on paper. Here are samples of my artwork:</p>
+                    
+                    <!-- Sketch Gallery Thumbnails -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="overflow-hidden rounded-xl border border-white/20 h-24 bg-black/40 group/img">
+                            <img src="sketch1.jpg" alt="Sketch Artwork 1" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=400&auto=format&fit=crop'">
+                        </div>
+                        <div class="overflow-hidden rounded-xl border border-white/20 h-24 bg-black/40 group/img">
+                            <img src="sketch2.jpg" alt="Sketch Artwork 2" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=400&auto=format&fit=crop'">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-white/10 text-xs text-purple-300 font-semibold uppercase tracking-wider">
+                    Creative Design • Fine Lines
                 </div>
             </div>
         </div>
@@ -651,7 +709,7 @@
             </div>
             <div id="chat-box" class="p-3 sm:p-4 h-56 sm:h-64 overflow-y-auto bg-black/70 flex flex-col gap-3 text-xs sm:text-sm">
                 <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md">
-                    Greetings! I'm an AI construct loaded with Sachin's data. Ask me about his skills, education, or missions (projects)!
+                    Greetings! I'm Ycsm. Ask me about Sachin's hobbies, singing, sketching, cricket, or tech skills!
                 </div>
             </div>
             <div class="p-2 sm:p-3 bg-black/90 border-t border-white/10 flex gap-2">
@@ -663,7 +721,7 @@
 
     <!-- Scripts -->
     <script>
-        // --- Live State Weather Widget Logic (Machida Default) ---
+        // --- Live State Weather Widget Logic ---
         const stateCoordinates = {
             "Machida": { lat: 35.5494, lon: 139.4457, name: "Machida, Tokyo" },
             "Punjab": { lat: 30.9010, lon: 75.8573, name: "Punjab" },
@@ -837,7 +895,7 @@
             }, 100);
         }
 
-        // --- Smart Chat Widget Logic ---
+        // --- Interactive Thinking Chat Bot Logic ---
         function toggleChat() {
             const widget = document.getElementById('chat-widget');
             if (widget.classList.contains('chat-closed')) {
@@ -864,7 +922,17 @@
             input.value = '';
             chatBox.scrollTop = chatBox.scrollHeight;
 
+            // Thinking state
+            const thinkingDiv = document.createElement('div');
+            thinkingDiv.id = "thinking-indicator";
+            thinkingDiv.className = "bg-white/10 text-gray-400 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md italic animate-pulse";
+            thinkingDiv.innerText = "Ycsm is analyzing telemetry and querying core systems...";
+            chatBox.appendChild(thinkingDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
             setTimeout(() => {
+                document.getElementById('thinking-indicator')?.remove();
+
                 const botDiv = document.createElement('div');
                 botDiv.className = "bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md shadow-lg";
                 
@@ -872,7 +940,10 @@
                 let reply = "";
 
                 if (m.match(/\b(hi|hello|hey|hii|sup|what's up)\b/)) {
-                    reply = "Greetings! 👋 Welcome to Sachin's portfolio. How can I assist you today?";
+                    reply = "Hey there! 👋 I'm Ycsm, Sachin's digital co-pilot. What's on your mind?";
+                }
+                else if (m.match(/\b(hobbies|hobby|cricket|singing|sketching|art|music)\b/)) {
+                    reply = "Besides writing pristine code, Sachin loves playing cricket 🏏, singing melodies (you can hear his voice sample in the Hobbies section) 🎤, and sketching detailed artwork ✏️!";
                 }
                 else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
                     reply = "Sachin Kumar is a Software Developer & ERP Support Specialist experienced in REST APIs, database management, and data analytics. He graduated from LPU and is based in Ludhiana, Punjab.";
@@ -887,13 +958,13 @@
                     reply = "Sachin is currently in ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and DSA from Amazon.";
                 }
                 else {
-                    reply = "That's awesome! Feel free to ask about Sachin's skills, experience, projects, or use the contact form to reach out directly.";
+                    reply = "That's awesome! Feel free to ask about Sachin's skills, hobbies, singing, sketching, cricket, or use the contact form to reach out directly.";
                 }
                 
                 botDiv.innerText = reply;
                 chatBox.appendChild(botDiv);
                 chatBox.scrollTop = chatBox.scrollHeight;
-            }, 700); 
+            }, 1000);
         }
     </script>
 </body>
