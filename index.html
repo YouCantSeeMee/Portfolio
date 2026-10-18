@@ -262,18 +262,11 @@
         <div class="absolute bottom-[-20%] left-[20%] w-[60%] h-[50%] bg-fuchsia-600/20 blur-[120px] rounded-full animate-blob animation-delay-4000"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation Header (Brand Title Only, No Menu Links) -->
     <nav class="fixed w-full bg-[#05010f]/80 backdrop-blur-xl shadow-lg z-40 border-b border-purple-500/20">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-extrabold text-purple-400 tracking-widest uppercase truncate">Sachin</h1>
-            <div class="space-x-4 md:space-x-6 hidden md:flex font-semibold text-gray-300 text-sm md:text-base">
-                <a href="#about" class="hover:text-purple-400 transition">About</a>
-                <a href="#journey" class="hover:text-purple-400 transition">Journey</a>
-                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
-                <a href="#skills" class="hover:text-purple-400 transition">Skills</a>
-                <a href="#hobbies" class="hover:text-purple-400 transition">Hobbies</a>
-                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
-            </div>
+            <h1 class="text-xl md:text-2xl font-extrabold text-purple-400 tracking-widest uppercase truncate">Sachin Kumar</h1>
+            <span class="text-xs text-purple-300 font-mono tracking-wider hidden sm:inline">🚀 Portfolio & Research Hub</span>
         </div>
     </nav>
 
@@ -700,12 +693,12 @@
             </div>
             <div id="chat-box" class="p-3 sm:p-4 h-64 sm:h-72 overflow-y-auto bg-black/70 flex flex-col gap-3 text-xs sm:text-sm">
                 <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[90%] border border-white/5 backdrop-blur-md">
-                    Greetings, pilot! I'm <strong>Ycsm</strong>, your advanced portfolio co-pilot. Ask me anything about Sachin's technical arsenal, projects, background, or click the quick chips below to navigate! 🚀
+                    Greetings, pilot! I'm <strong>Ycsm</strong>, your Gemini-powered co-pilot. How are you doing today? You can ask me anything about Sachin's personal strengths, background, technical skills, or projects! 🚀
                     <div class="mt-2 flex flex-wrap gap-1.5">
+                        <button onclick="sendQuickQuery('strengths')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">💪 Strengths</button>
+                        <button onclick="sendQuickQuery('who are you')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">👤 About Sachin</button>
                         <button onclick="sendQuickQuery('skills')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🛠️ Skills</button>
-                        <button onclick="sendQuickQuery('projects')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🌠 Projects</button>
-                        <button onclick="sendQuickQuery('experience')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🪐 Experience</button>
-                        <button onclick="sendQuickQuery('hobbies')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🎨 Hobbies</button>
+                        <button onclick="sendQuickQuery('thanks')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">✨ Thanks</button>
                     </div>
                 </div>
             </div>
@@ -910,14 +903,6 @@
             sendMessage();
         }
 
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-                toggleChat();
-            }
-        }
-
         function sendMessage() {
             const input = document.getElementById('chat-input');
             const message = input.value.trim();
@@ -947,76 +932,52 @@
                 
                 const m = message.toLowerCase();
                 let replyText = "";
-                let actionChipId = "";
-                let actionChipText = "";
 
                 if (m.match(/\b(hi|hello|hey|hii|sup|what's up|greetings)\b/)) {
-                    replyText = "Hello there! 👋 I'm Ycsm, your Gemini-powered portfolio assistant. How can I guide your journey through Sachin's cosmos today?";
+                    replyText = "Hello there! 👋 I'm Ycsm, your Gemini-powered co-pilot. I'm doing fantastic, thanks for asking! How are you doing today? 🚀";
                 }
                 else if (m.match(/\b(how are you|how do you do|you good)\b/)) {
-                    replyText = "All neural weights are synchronized and warp cores are running smoothly! Ready to assist you.";
+                    replyText = "All quantum core processors are running at 100% warp efficiency, and I'm feeling wonderful! How are you doing? Let me know if you want to chat about Sachin! ✨";
+                }
+                else if (m.match(/\b(i am good|i'm good|great|fine|doing well|awesome)\b/)) {
+                    replyText = "That's wonderful to hear! 😊 Glad you're having a great day. What would you like to explore about Sachin Kumar today?";
+                }
+                else if (m.match(/\b(strengths|strength|superpower|traits|qualities|personality)\b/)) {
+                    replyText = "💪 **Sachin's Core Strengths & Superpowers:**\n• **Analytical Problem Solving:** Exceptional at breaking down complex algorithms and debugging legacy ERP systems.\n• **High Adaptability:** Seamlessly transitions between software development, data analysis, and technical support roles.\n• **Continuous Learner:** Constantly updating skills with cutting-edge tools like Apache Airflow 3 and TensorFlow.\n• **Calm Under Pressure:** Thrives in fast-paced operational environments, much like handling pressure on the cricket pitch! 🏏";
+                }
+                else if (m.match(/\b(details about me|about sachin|who is sachin|background|bio)\b/)) {
+                    replyText = "🪐 **Detailed Background on Sachin Kumar:**\n• **Location & Roots:** Based in Ludhiana, Punjab, currently operating in Noida.\n• **Education:** B.Tech in Computer Science & Engineering from Lovely Professional University (LPU, 2021-2025).\n• **Professional Journey:** Driving ERP Support & database operations at Dainik Jagran, with prior experience as a Software Dev at HHP Software and Data Analyst at Kumar Fabricators.\n• **Multilingual:** Fluent in Hindi, English, Punjabi, Bengali, and conversational Japanese!";
                 }
                 else if (m.match(/\b(hobbies|hobby|cricket|gaming|strategy|sketching|art|drawings)\b/)) {
-                    replyText = "Sachin has great multi-disciplinary passions! He loves cricket 🏏, tactical strategy games 🎮, and sketching detailed fine-line artwork ✏️.";
-                    actionChipId = "hobbies";
-                    actionChipText = "🎨 View Passions & Art Gallery";
-                }
-                else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
-                    replyText = "Sachin Kumar is a Software Developer & ERP Support Specialist based in Ludhiana, Punjab. He holds a B.Tech in Computer Science and Engineering from Lovely Professional University (LPU) and specializes in building reliable backend systems, APIs, and data solutions.";
-                    actionChipId = "about";
-                    actionChipText = "👤 Read About Sachin";
+                    replyText = "🎨🏏🎮 Sachin has fantastic passions! When he's not optimizing backend code or managing ERP servers, he enjoys playing cricket, diving into strategic tactical video games, and creating fine-line sketches.";
                 }
                 else if (m.match(/\b(skills|tech stack|technologies|programming languages)\b/)) {
-                    replyText = "Sachin's core tech arsenal spans across languages like Java, Python, JavaScript, R, and SQL, along with frameworks and tools like Hadoop, Oracle, Selenium, and Flask!";
-                    actionChipId = "skills";
-                    actionChipText = "🛠️ View Tech Arsenal";
+                    replyText = "🛠️ **Tech Arsenal:** Java, Python, JavaScript, R, SQL, HTML/CSS, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, and Flask!";
                 }
                 else if (m.match(/\b(projects|show projects|live projects)\b/)) {
-                    replyText = "He has built stellar web applications including a Flask PMS Tracker, TensorFlow Fake Logo Detector, QR Scam Detector, and a Java-React Event Management System.";
-                    actionChipId = "projects";
-                    actionChipText = "🌠 Explore Digital Creations";
-                }
-                else if (m.match(/\b(experience|internship|certificates|achievements|current job|dainik|jagran)\b/)) {
-                    replyText = "Sachin currently drives ERP Support at Dainik Jagran (Noida). Previously, he worked as a Software Developer intern at HHP Software and Data Analyst at Kumar Fabricators. He is also certified in Apache Airflow 3, Computer Graphics (Univ. of Tokyo), and Amazon DSA.";
-                    actionChipId = "journey";
-                    actionChipText = "🪐 View Career Orbit";
-                }
-                else if (m.match(/\b(weather|machida|tokyo|temperature)\b/)) {
-                    replyText = "Atmospheric conditions are active! You can check live weather feeds for Machida, Tokyo or various Indian states right from the live dropdown weather widget near Sachin's profile picture. 🌤️";
+                    replyText = "🌠 Notable Creations: Flask PMS Tracker (Health Tech), TensorFlow Fake Logo Detector, QR Scam Detector (Cyber Security), and a full-stack Java-React Event Management System.";
                 }
                 else if (m.match(/\b(contact|hire|email|reach)\b/)) {
-                    replyText = "You can get in touch with Sachin directly via email at sachin25300@gmail.com or by transmitting a message through his cosmic contact form!";
-                    actionChipId = "contact";
-                    actionChipText = "📡 Open Contact Form";
+                    replyText = "📡 You can reach Sachin directly via email at sachin25300@gmail.com or by filling out the cosmic contact form right on this page!";
                 }
                 else if (m.match(/\b(joke|laugh|funny)\b/)) {
-                    replyText = "Here is a classic developer joke: Why do Java developers wear glasses? Because they don't C#! 🤓☕";
+                    replyText = "Here is one for you: Why do programmers prefer dark mode? Because light attracts bugs! 🐛😂";
                 }
-                else if (m.match(/\b(thank you|thanks|thx)\b/)) {
-                    replyText = "You're very welcome! Let me know if you want to explore anything else in Sachin's portfolio. 🚀";
+                else if (m.match(/\b(thank you|thanks|thx|thank u)\b/)) {
+                    replyText = "You're very welcome! It was an absolute pleasure chatting with you. Have a truly wonderful and productive day ahead! 🌟🚀";
+                }
+                else if (m.match(/\b(bye|goodbye|see you|cya)\b/)) {
+                    replyText = "Goodbye, pilot! Safe travels across the digital cosmos. Have a great day! 👋✨";
                 }
                 else {
                     const fallbacks = [
-                        `That's an insightful question about "${message}"! 🌌 While I'm tuned precisely to Sachin's professional profile, feel free to inspect his skills, projects, or work history.`,
-                        `I processed your prompt through my contextual model! You can easily explore Sachin's tech stack, career journey, or artwork using the navigation links below.`
+                        `That's a fascinating thought about "${message}"! 🌌 While I'm deeply tuned into Sachin's professional telemetry and strengths, I'm always ready to chat. Want to discuss his tech stack, background, or personal strengths?`,
+                        `I processed that through my neural core! Feel free to ask me about Sachin's strengths, education at LPU, career journey, or hobbies.`
                     ];
                     replyText = fallbacks[Math.floor(Math.random() * fallbacks.length)];
-                    actionChipId = "projects";
-                    actionChipText = "🚀 Explore Portfolio";
                 }
                 
-                const textSpan = document.createElement('span');
-                textSpan.innerText = replyText;
-                botDiv.appendChild(textSpan);
-
-                if (actionChipId && actionChipText) {
-                    const btn = document.createElement('button');
-                    btn.className = "mt-1 self-start px-3 py-1.5 bg-pink-600/30 hover:bg-pink-600 text-pink-200 hover:text-white rounded-xl text-xs font-bold border border-pink-500/40 transition shadow-md flex items-center gap-1.5";
-                    btn.innerHTML = `${actionChipText} <i class="fa-solid fa-arrow-right text-[10px]"></i>`;
-                    btn.onclick = () => scrollToSection(actionChipId);
-                    botDiv.appendChild(btn);
-                }
-
+                botDiv.innerText = replyText;
                 chatBox.appendChild(botDiv);
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 1000);
