@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin Kumar | Portfolio</title>
     <!-- Ice Bear Tab Favicon -->
-<link rel="icon" type="image/png" href="icebear.png">
+    <link rel="icon" type="image/png" href="icebear.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -316,12 +316,13 @@
                 </div>
             </div>
 
-            <!-- Live State Weather Widget below Profile Picture -->
+            <!-- Live State Weather Widget below Profile Picture (Machida Default) -->
             <div class="glass-card px-6 py-3 rounded-2xl flex items-center gap-4 relative z-10 border border-purple-500/30 shadow-lg">
                 <div class="flex flex-col">
-                    <label for="state-select" class="text-[10px] uppercase tracking-wider text-purple-300 font-semibold mb-1">Select State Weather 🌍</label>
+                    <label for="state-select" class="text-[10px] uppercase tracking-wider text-purple-300 font-semibold mb-1">Select Location 🌍</label>
                     <select id="state-select" onchange="updateWeather()" class="bg-black/60 text-white text-xs px-3 py-1.5 rounded-xl border border-white/20 focus:outline-none focus:border-pink-500 cursor-pointer">
-                        <option value="Punjab" selected>Punjab (Ludhiana)</option>
+                        <option value="Machida" selected>Machida, Tokyo (Japan)</option>
+                        <option value="Punjab">Punjab (Ludhiana)</option>
                         <option value="Delhi">Delhi</option>
                         <option value="Maharashtra">Maharashtra (Pune)</option>
                         <option value="Uttar Pradesh">Uttar Pradesh (Noida)</option>
@@ -662,8 +663,9 @@
 
     <!-- Scripts -->
     <script>
-        // --- Live State Weather Widget Logic ---
+        // --- Live State Weather Widget Logic (Machida Default) ---
         const stateCoordinates = {
+            "Machida": { lat: 35.5494, lon: 139.4457, name: "Machida, Tokyo" },
             "Punjab": { lat: 30.9010, lon: 75.8573, name: "Punjab" },
             "Delhi": { lat: 28.6139, lon: 77.2090, name: "Delhi" },
             "Maharashtra": { lat: 18.5204, lon: 73.8567, name: "Maharashtra" },
