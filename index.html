@@ -605,7 +605,7 @@
                         <i class="fa-solid fa-gamepad"></i>
                     </div>
                     <h4 class="text-2xl font-bold text-white mb-3">Gaming & Strategy 🎮</h4>
-                    <p class="text-gray-300 text-sm leading-relaxed">Engaged in testing games on Steam, identifying bugs, glitches, and gameplay issues while applying problem-solving skills to improve game quality and user experience.</p>
+                    <p class="text-gray-300 text-sm leading-relaxed">Engaged in immersive strategy and tactical games that test problem-solving skills, quick reflexes, and complex system navigation—skills that directly translate into writing efficient software algorithms.</p>
                 </div>
                 <div class="mt-6 pt-4 border-t border-white/10 text-xs text-purple-300 font-semibold uppercase tracking-wider">
                     Tactical Thinking • Reflexes
@@ -886,7 +886,7 @@
             }, 100);
         }
 
-        // --- Advanced Interactive Thinking & Conversational AI Chat Bot Logic ---
+        // --- Supercharged Conversational AI Chat Bot Logic ---
         function toggleChat() {
             const widget = document.getElementById('chat-widget');
             if (widget.classList.contains('chat-closed')) {
@@ -913,11 +913,11 @@
             input.value = '';
             chatBox.scrollTop = chatBox.scrollHeight;
 
-            // Thinking state
+            // Thinking indicator
             const thinkingDiv = document.createElement('div');
             thinkingDiv.id = "thinking-indicator";
             thinkingDiv.className = "bg-white/10 text-gray-400 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md italic animate-pulse";
-            thinkingDiv.innerText = "Ycsm is analyzing data streams and formulating a response...";
+            thinkingDiv.innerText = "Ycsm is thinking...";
             chatBox.appendChild(thinkingDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -930,26 +930,47 @@
                 const m = message.toLowerCase();
                 let reply = "";
 
-                if (m.match(/\b(hi|hello|hey|hii|sup|what's up)\b/)) {
-                    reply = "Hey there! 👋 I'm Ycsm, Sachin's digital co-pilot. What's on your mind?";
+                if (m.match(/\b(hi|hello|hey|hii|sup|what's up|greetings)\b/)) {
+                    reply = "Hello there! 👋 I'm Ycsm, your personal AI co-pilot. How can I help you navigate Sachin's cosmos today?";
+                }
+                else if (m.match(/\b(how are you|how do you do|you good)\b/)) {
+                    reply = "All quantum core processors are running at 100% warp efficiency! Thanks for asking. How are you doing?";
                 }
                 else if (m.match(/\b(hobbies|hobby|cricket|gaming|strategy|sketching|art|drawings)\b/)) {
-                    reply = "Outside of coding, Sachin loves playing cricket 🏏, diving into strategic video games 🎮, and sketching detailed character artwork ✏️!";
+                    reply = "Sachin has awesome passions! When he isn't managing ERP databases or coding web apps, he loves playing cricket 🏏, diving into strategic video games 🎮, and sketching detailed artwork ✏️!";
                 }
                 else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
-                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist experienced in REST APIs, database management, and data analytics. He graduated from LPU and is based in Ludhiana, Punjab.";
+                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist based in Ludhiana, Punjab. He specializes in REST APIs, full-stack development, and data analytics, having graduated with a B.Tech in CSE from LPU.";
                 }
                 else if (m.match(/\b(skills|tech stack|technologies|programming languages)\b/)) {
-                    reply = "Sachin's tech stack includes Java, Python, JavaScript, R, SQL, HTML/CSS, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, Flask, and Database Management.";
+                    reply = "Sachin's core tech stack features Java, Python, JavaScript, R, SQL, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, and Flask.";
                 }
                 else if (m.match(/\b(projects|show projects|live projects)\b/)) {
-                    reply = "Key projects include: PMS Tracker (Flask/Python), Fake Logo Detector (TensorFlow), QR Scam Detector, and a full-stack Event Management System. Scroll up to view them in Digital Creations!";
+                    reply = "His notable projects include a Flask PMS Tracker, a TensorFlow Fake Logo Detector, a QR Scam Detector, and a full-stack Event Management System. Scroll up to explore them in Digital Creations!";
                 }
                 else if (m.match(/\b(experience|internship|certificates|achievements|current job)\b/)) {
-                    reply = "Sachin is currently in ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and DSA from Amazon.";
+                    reply = "Sachin currently drives ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and Amazon DSA!";
+                }
+                else if (m.match(/\b(weather|machida|tokyo|temperature)\b/)) {
+                    reply = "Atmospheric conditions are active! You can check live weather feeds for Machida, Tokyo or various Indian states right from the weather widget above. 🌤️";
+                }
+                else if (m.match(/\b(contact|hire|email|reach)\b/)) {
+                    reply = "You can get in touch with Sachin directly via email at sachin25300@gmail.com or by submitting a message through the contact form at the bottom of the page! 🤝";
+                }
+                else if (m.match(/\b(joke|laugh|funny)\b/)) {
+                    reply = "Here's one for you: Why do programmers prefer dark mode? Because light attracts bugs! 🐛😂";
+                }
+                else if (m.match(/\b(thank you|thanks|thx)\b/)) {
+                    reply = "You're very welcome! Let me know if you need any other information. 🚀";
                 }
                 else {
-                    reply = "That's awesome! Feel free to ask about Sachin's skills, hobbies, gaming, sketching, cricket, or use the contact form to reach out directly.";
+                    // Smart contextual fallback so it never feels limited
+                    const fallbacks = [
+                        `That's a fascinating thought about "${message}"! 🌌 While I'm deeply tuned into Sachin's professional telemetry, I'm always learning. Want to chat about his tech stack, projects, or hobbies?`,
+                        `I processed that, but my primary directives are focused on Sachin's portfolio! Feel free to ask about his work experience, coding skills, or how to contact him.`,
+                        `That's intriguing! You can ask me about Sachin's software engineering background, his university days at LPU, or his sketching gallery.`
+                    ];
+                    reply = fallbacks[Math.floor(Math.random() * fallbacks.length)];
                 }
                 
                 botDiv.innerText = reply;
