@@ -576,11 +576,11 @@
         </div>
     </section>
 
-    <!-- Hobbies Section (Cricket, Singing with Audio, Sketching with Work) -->
+    <!-- Hobbies Section (Cricket, Singing with Audio, Sketching with Work Gallery) -->
     <section id="hobbies" class="py-20 px-4 relative z-10 max-w-6xl mx-auto">
         <div class="text-center mb-16">
             <h3 class="text-3xl sm:text-4xl font-extrabold text-white hover-heading tracking-wide">Passions & Hobbies 🎨🏏🎵</h3>
-            <p class="text-purple-300 mt-2 font-light text-sm sm:text-base">Here is what I love doing in free time.</p>
+            <p class="text-purple-300 mt-2 font-light text-sm sm:text-base">When I'm not writing code or supporting ERP servers, here is what I love doing.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8">
@@ -630,13 +630,13 @@
                     <h4 class="text-2xl font-bold text-white mb-3">Sketching & Art ✏️</h4>
                     <p class="text-gray-300 text-sm leading-relaxed mb-4">Sketching allows me to visualize ideas and capture imagination on paper. Here are samples of my artwork:</p>
                     
-                    <!-- Sketch Gallery Thumbnails -->
+                    <!-- Sketch Gallery Thumbnails (HD Enhanced styling) -->
                     <div class="grid grid-cols-2 gap-3">
-                        <div class="overflow-hidden rounded-xl border border-white/20 h-24 bg-black/40 group/img">
-                            <img src="sketch1.png" alt="Sketch Artwork 1" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=400&auto=format&fit=crop'">
+                        <div class="overflow-hidden rounded-xl border border-purple-500/30 h-28 bg-black/60 group/img shadow-md">
+                            <img src="sketch1.png" alt="Sketch Artwork 1" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500 contrast-125 brightness-95" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=400&auto=format&fit=crop'">
                         </div>
-                        <div class="overflow-hidden rounded-xl border border-white/20 h-24 bg-black/40 group/img">
-                            <img src="sketch2.png" alt="Sketch Artwork 2" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=400&auto=format&fit=crop'">
+                        <div class="overflow-hidden rounded-xl border border-purple-500/30 h-28 bg-black/60 group/img shadow-md">
+                            <img src="sketch2.png" alt="Sketch Artwork 2" class="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-500 contrast-125 brightness-95" onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=400&auto=format&fit=crop'">
                         </div>
                     </div>
                 </div>
@@ -696,7 +696,7 @@
         <p>&copy; 2026 Sachin Kumar. Navigating the digital cosmos.</p>
     </footer>
 
-    <!-- Floating AI Chat Assistant -->
+    <!-- Floating Advanced AI Chat Assistant -->
     <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         <button onclick="toggleChat()" class="gradient-btn w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.6)] text-white text-2xl sm:text-3xl hover:rotate-12 transition-transform border-2 border-white/20">
             🤖
@@ -709,7 +709,7 @@
             </div>
             <div id="chat-box" class="p-3 sm:p-4 h-56 sm:h-64 overflow-y-auto bg-black/70 flex flex-col gap-3 text-xs sm:text-sm">
                 <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md">
-                    Greetings! I'm Ycsm. Ask me about Sachin's hobbies, singing, sketching, cricket, or tech skills!
+                    Greetings, pilot! I'm Ycsm, your advanced portfolio co-pilot. Ask me anything about Sachin's skills, projects, hobbies, or live weather! 🚀
                 </div>
             </div>
             <div class="p-2 sm:p-3 bg-black/90 border-t border-white/10 flex gap-2">
@@ -895,7 +895,7 @@
             }, 100);
         }
 
-        // --- Interactive Thinking Chat Bot Logic ---
+        // --- Advanced Interactive Thinking & Conversational AI Chat Bot Logic ---
         function toggleChat() {
             const widget = document.getElementById('chat-widget');
             if (widget.classList.contains('chat-closed')) {
@@ -922,11 +922,11 @@
             input.value = '';
             chatBox.scrollTop = chatBox.scrollHeight;
 
-            // Thinking state
+            // Advanced thinking state with realistic delay
             const thinkingDiv = document.createElement('div');
             thinkingDiv.id = "thinking-indicator";
             thinkingDiv.className = "bg-white/10 text-gray-400 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md italic animate-pulse";
-            thinkingDiv.innerText = "Ycsm is analyzing telemetry and querying core systems...";
+            thinkingDiv.innerText = "Ycsm is analyzing data streams and formulating a response...";
             chatBox.appendChild(thinkingDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -939,26 +939,32 @@
                 const m = message.toLowerCase();
                 let reply = "";
 
-                if (m.match(/\b(hi|hello|hey|hii|sup|what's up)\b/)) {
-                    reply = "Hey there! 👋 I'm Ycsm, Sachin's digital co-pilot. What's on your mind?";
+                if (m.match(/\b(hi|hello|hey|hii|sup|what's up|greetings)\b/)) {
+                    reply = "Hello there! 👋 I'm Ycsm, your interactive neural guide. What would you like to discover about Sachin today?";
                 }
-                else if (m.match(/\b(hobbies|hobby|cricket|singing|sketching|art|music)\b/)) {
-                    reply = "Besides writing pristine code, Sachin loves playing cricket 🏏, singing melodies (you can hear his voice sample in the Hobbies section) 🎤, and sketching detailed artwork ✏️!";
+                else if (m.match(/\b(hobbies|hobby|cricket|singing|sketching|art|music|drawings)\b/)) {
+                    reply = "Sachin has some fantastic creative outlets! When he isn't engineering backend architectures, he loves playing cricket 🏏, singing melodies (check out his voice sample in the Hobbies section) 🎤, and sketching incredible anime/character artwork ✏️!";
                 }
                 else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
-                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist experienced in REST APIs, database management, and data analytics. He graduated from LPU and is based in Ludhiana, Punjab.";
+                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist based in Ludhiana, Punjab. He specializes in REST APIs, full-stack development, and data analytics, having graduated with a B.Tech in CSE from LPU.";
                 }
                 else if (m.match(/\b(skills|tech stack|technologies|programming languages)\b/)) {
-                    reply = "Sachin's tech stack includes Java, Python, JavaScript, R, SQL, HTML/CSS, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, Flask, and Database Management.";
+                    reply = "Sachin's core tech stack features Java, Python, JavaScript, R, SQL, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, and Flask.";
                 }
                 else if (m.match(/\b(projects|show projects|live projects)\b/)) {
-                    reply = "Key projects include: PMS Tracker (Flask/Python), Fake Logo Detector (TensorFlow), QR Scam Detector, and a full-stack Event Management System. Scroll up to view them in Digital Creations!";
+                    reply = "His notable projects include a Flask PMS Tracker, a TensorFlow Fake Logo Detector, a QR Scam Detector, and a full-stack Event Management System. Scroll up to explore them in Digital Creations!";
                 }
                 else if (m.match(/\b(experience|internship|certificates|achievements|current job)\b/)) {
-                    reply = "Sachin is currently in ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and DSA from Amazon.";
+                    reply = "Sachin currently drives ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and Amazon DSA!";
+                }
+                else if (m.match(/\b(weather|machida|tokyo|temperature)\b/)) {
+                    reply = "Atmospheric conditions are active! You can check live weather feeds for Machida, Tokyo or various Indian states right from the weather widget above. 🌤️";
+                }
+                else if (m.match(/\b(contact|hire|email|reach)\b/)) {
+                    reply = "You can get in touch with Sachin directly via email at sachin25300@gmail.com or by submitting a message through the contact form at the bottom of the page! 🤝";
                 }
                 else {
-                    reply = "That's awesome! Feel free to ask about Sachin's skills, hobbies, singing, sketching, cricket, or use the contact form to reach out directly.";
+                    reply = `That's a fascinating question about "${message}"! 🌌 While I'm specialized in Sachin's professional telemetry, feel free to ask about his technical skills, projects, hobbies, or how to contact him.`;
                 }
                 
                 botDiv.innerText = reply;
