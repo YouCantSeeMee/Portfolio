@@ -74,8 +74,8 @@
             width: 200%;
             height: 200%;
             background-image: radial-gradient(2px 2px at 40px 60px, rgba(255,255,255,0.4), rgba(0,0,0,0)), 
-                              radial-gradient(1px 1px at 120px 140px, rgba(56,189,248,0.5), rgba(0,0,0,0)),
-                              radial-gradient(2px 2px at 200px 80px, rgba(255,255,255,0.3), rgba(0,0,0,0));
+                            radial-gradient(1px 1px at 120px 140px, rgba(56,189,248,0.5), rgba(0,0,0,0)),
+                            radial-gradient(2px 2px at 200px 80px, rgba(255,255,255,0.3), rgba(0,0,0,0));
             background-repeat: repeat;
             background-size: 250px 250px;
             animation: snowfall 12s linear infinite;
@@ -695,16 +695,22 @@
 
         <div id="chat-widget" class="chat-closed absolute bottom-16 sm:bottom-20 right-0 w-[280px] sm:w-80 glass-card rounded-3xl flex flex-col overflow-hidden border-2 border-pink-500/50 shadow-2xl">
             <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-3 sm:p-4 text-white font-bold flex justify-between items-center shadow-md">
-                <span>Ycsm</span>
+                <span>Ycsm (Gemini Core)</span>
                 <button onclick="toggleChat()" class="text-white hover:text-gray-300 text-lg sm:text-xl"><i class="fa-solid fa-times"></i></button>
             </div>
-            <div id="chat-box" class="p-3 sm:p-4 h-56 sm:h-64 overflow-y-auto bg-black/70 flex flex-col gap-3 text-xs sm:text-sm">
-                <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md">
-                    Greetings, pilot! I'm Ycsm, your advanced portfolio co-pilot. Ask me anything about Sachin's skills, projects, hobbies, or live weather! 🚀
+            <div id="chat-box" class="p-3 sm:p-4 h-64 sm:h-72 overflow-y-auto bg-black/70 flex flex-col gap-3 text-xs sm:text-sm">
+                <div class="bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[90%] border border-white/5 backdrop-blur-md">
+                    Greetings, pilot! I'm <strong>Ycsm</strong>, your advanced portfolio co-pilot. Ask me anything about Sachin's technical arsenal, projects, background, or click the quick chips below to navigate! 🚀
+                    <div class="mt-2 flex flex-wrap gap-1.5">
+                        <button onclick="sendQuickQuery('skills')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🛠️ Skills</button>
+                        <button onclick="sendQuickQuery('projects')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🌠 Projects</button>
+                        <button onclick="sendQuickQuery('experience')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🪐 Experience</button>
+                        <button onclick="sendQuickQuery('hobbies')" class="px-2 py-1 bg-purple-500/30 hover:bg-purple-500 text-purple-200 hover:text-white rounded-lg text-[10px] transition">🎨 Hobbies</button>
+                    </div>
                 </div>
             </div>
             <div class="p-2 sm:p-3 bg-black/90 border-t border-white/10 flex gap-2">
-                <input type="text" id="chat-input" placeholder="Query..." class="flex-1 outline-none px-3 sm:px-4 py-2 text-xs sm:text-sm bg-white/5 text-white placeholder-gray-500 rounded-xl border border-white/10 focus:border-pink-500 transition-colors" onkeypress="handleEnter(event)">
+                <input type="text" id="chat-input" placeholder="Ask Ycsm anything..." class="flex-1 outline-none px-3 sm:px-4 py-2 text-xs sm:text-sm bg-white/5 text-white placeholder-gray-500 rounded-xl border border-white/10 focus:border-pink-500 transition-colors" onkeypress="handleEnter(event)">
                 <button onclick="sendMessage()" class="bg-pink-600 text-white px-3 sm:px-4 py-2 rounded-xl hover:bg-pink-500 font-bold shadow-[0_0_15px_rgba(236,72,153,0.5)] text-xs sm:text-sm"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
@@ -886,7 +892,7 @@
             }, 100);
         }
 
-        // --- Supercharged Conversational AI Chat Bot Logic ---
+        // --- Supercharged Conversational AI Chat Bot Logic (Gemini Style) ---
         function toggleChat() {
             const widget = document.getElementById('chat-widget');
             if (widget.classList.contains('chat-closed')) {
@@ -899,6 +905,18 @@
         }
 
         function handleEnter(e) { if (e.key === 'Enter') sendMessage(); }
+        function sendQuickQuery(queryText) {
+            document.getElementById('chat-input').value = queryText;
+            sendMessage();
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+                toggleChat();
+            }
+        }
 
         function sendMessage() {
             const input = document.getElementById('chat-input');
@@ -917,7 +935,7 @@
             const thinkingDiv = document.createElement('div');
             thinkingDiv.id = "thinking-indicator";
             thinkingDiv.className = "bg-white/10 text-gray-400 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md italic animate-pulse";
-            thinkingDiv.innerText = "Ycsm is thinking...";
+            thinkingDiv.innerText = "Ycsm is generating response...";
             chatBox.appendChild(thinkingDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
 
@@ -925,55 +943,80 @@
                 document.getElementById('thinking-indicator')?.remove();
 
                 const botDiv = document.createElement('div');
-                botDiv.className = "bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%] border border-white/5 backdrop-blur-md shadow-lg";
+                botDiv.className = "bg-white/10 text-gray-200 p-3 rounded-2xl rounded-tl-none self-start max-w-[90%] border border-white/5 backdrop-blur-md shadow-lg flex flex-col gap-2";
                 
                 const m = message.toLowerCase();
-                let reply = "";
+                let replyText = "";
+                let actionChipId = "";
+                let actionChipText = "";
 
                 if (m.match(/\b(hi|hello|hey|hii|sup|what's up|greetings)\b/)) {
-                    reply = "Hello there! 👋 I'm Ycsm, your personal AI co-pilot. How can I help you navigate Sachin's cosmos today?";
+                    replyText = "Hello there! 👋 I'm Ycsm, your Gemini-powered portfolio assistant. How can I guide your journey through Sachin's cosmos today?";
                 }
                 else if (m.match(/\b(how are you|how do you do|you good)\b/)) {
-                    reply = "All quantum core processors are running at 100% warp efficiency! Thanks for asking. How are you doing?";
+                    replyText = "All neural weights are synchronized and warp cores are running smoothly! Ready to assist you.";
                 }
                 else if (m.match(/\b(hobbies|hobby|cricket|gaming|strategy|sketching|art|drawings)\b/)) {
-                    reply = "Sachin has awesome passions! When he isn't managing ERP databases or coding web apps, he loves playing cricket 🏏, diving into strategic video games 🎮, and sketching detailed artwork ✏️!";
+                    replyText = "Sachin has great multi-disciplinary passions! He loves cricket 🏏, tactical strategy games 🎮, and sketching detailed fine-line artwork ✏️.";
+                    actionChipId = "hobbies";
+                    actionChipText = "🎨 View Passions & Art Gallery";
                 }
                 else if (m.match(/\b(who is sachin|about me|introduce yourself|background)\b/)) {
-                    reply = "Sachin Kumar is a Software Developer & ERP Support Specialist based in Ludhiana, Punjab. He specializes in REST APIs, full-stack development, and data analytics, having graduated with a B.Tech in CSE from LPU.";
+                    replyText = "Sachin Kumar is a Software Developer & ERP Support Specialist based in Ludhiana, Punjab. He holds a B.Tech in Computer Science and Engineering from Lovely Professional University (LPU) and specializes in building reliable backend systems, APIs, and data solutions.";
+                    actionChipId = "about";
+                    actionChipText = "👤 Read About Sachin";
                 }
                 else if (m.match(/\b(skills|tech stack|technologies|programming languages)\b/)) {
-                    reply = "Sachin's core tech stack features Java, Python, JavaScript, R, SQL, Bootstrap, Hadoop, Selenium, Oracle, TensorFlow, and Flask.";
+                    replyText = "Sachin's core tech arsenal spans across languages like Java, Python, JavaScript, R, and SQL, along with frameworks and tools like Hadoop, Oracle, Selenium, and Flask!";
+                    actionChipId = "skills";
+                    actionChipText = "🛠️ View Tech Arsenal";
                 }
                 else if (m.match(/\b(projects|show projects|live projects)\b/)) {
-                    reply = "His notable projects include a Flask PMS Tracker, a TensorFlow Fake Logo Detector, a QR Scam Detector, and a full-stack Event Management System. Scroll up to explore them in Digital Creations!";
+                    replyText = "He has built stellar web applications including a Flask PMS Tracker, TensorFlow Fake Logo Detector, QR Scam Detector, and a Java-React Event Management System.";
+                    actionChipId = "projects";
+                    actionChipText = "🌠 Explore Digital Creations";
                 }
-                else if (m.match(/\b(experience|internship|certificates|achievements|current job)\b/)) {
-                    reply = "Sachin currently drives ERP Support at Dainik Jagran. Previously, he interned at HHP Software and worked as a Data Analyst at Kumar Fabricators. He also holds certifications in Apache Airflow 3, Computer Graphics from Univ. of Tokyo, and Amazon DSA!";
+                else if (m.match(/\b(experience|internship|certificates|achievements|current job|dainik|jagran)\b/)) {
+                    replyText = "Sachin currently drives ERP Support at Dainik Jagran (Noida). Previously, he worked as a Software Developer intern at HHP Software and Data Analyst at Kumar Fabricators. He is also certified in Apache Airflow 3, Computer Graphics (Univ. of Tokyo), and Amazon DSA.";
+                    actionChipId = "journey";
+                    actionChipText = "🪐 View Career Orbit";
                 }
                 else if (m.match(/\b(weather|machida|tokyo|temperature)\b/)) {
-                    reply = "Atmospheric conditions are active! You can check live weather feeds for Machida, Tokyo or various Indian states right from the weather widget above. 🌤️";
+                    replyText = "Atmospheric conditions are active! You can check live weather feeds for Machida, Tokyo or various Indian states right from the live dropdown weather widget near Sachin's profile picture. 🌤️";
                 }
                 else if (m.match(/\b(contact|hire|email|reach)\b/)) {
-                    reply = "You can get in touch with Sachin directly via email at sachin25300@gmail.com or by submitting a message through the contact form at the bottom of the page! 🤝";
+                    replyText = "You can get in touch with Sachin directly via email at sachin25300@gmail.com or by transmitting a message through his cosmic contact form!";
+                    actionChipId = "contact";
+                    actionChipText = "📡 Open Contact Form";
                 }
                 else if (m.match(/\b(joke|laugh|funny)\b/)) {
-                    reply = "Here's one for you: Why do programmers prefer dark mode? Because light attracts bugs! 🐛😂";
+                    replyText = "Here is a classic developer joke: Why do Java developers wear glasses? Because they don't C#! 🤓☕";
                 }
                 else if (m.match(/\b(thank you|thanks|thx)\b/)) {
-                    reply = "You're very welcome! Let me know if you need any other information. 🚀";
+                    replyText = "You're very welcome! Let me know if you want to explore anything else in Sachin's portfolio. 🚀";
                 }
                 else {
-                    // Smart contextual fallback so it never feels limited
                     const fallbacks = [
-                        `That's a fascinating thought about "${message}"! 🌌 While I'm deeply tuned into Sachin's professional telemetry, I'm always learning. Want to chat about his tech stack, projects, or hobbies?`,
-                        `I processed that, but my primary directives are focused on Sachin's portfolio! Feel free to ask about his work experience, coding skills, or how to contact him.`,
-                        `That's intriguing! You can ask me about Sachin's software engineering background, his university days at LPU, or his sketching gallery.`
+                        `That's an insightful question about "${message}"! 🌌 While I'm tuned precisely to Sachin's professional profile, feel free to inspect his skills, projects, or work history.`,
+                        `I processed your prompt through my contextual model! You can easily explore Sachin's tech stack, career journey, or artwork using the navigation links below.`
                     ];
-                    reply = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+                    replyText = fallbacks[Math.floor(Math.random() * fallbacks.length)];
+                    actionChipId = "projects";
+                    actionChipText = "🚀 Explore Portfolio";
                 }
                 
-                botDiv.innerText = reply;
+                const textSpan = document.createElement('span');
+                textSpan.innerText = replyText;
+                botDiv.appendChild(textSpan);
+
+                if (actionChipId && actionChipText) {
+                    const btn = document.createElement('button');
+                    btn.className = "mt-1 self-start px-3 py-1.5 bg-pink-600/30 hover:bg-pink-600 text-pink-200 hover:text-white rounded-xl text-xs font-bold border border-pink-500/40 transition shadow-md flex items-center gap-1.5";
+                    btn.innerHTML = `${actionChipText} <i class="fa-solid fa-arrow-right text-[10px]"></i>`;
+                    btn.onclick = () => scrollToSection(actionChipId);
+                    botDiv.appendChild(btn);
+                }
+
                 chatBox.appendChild(botDiv);
                 chatBox.scrollTop = chatBox.scrollHeight;
             }, 1000);
