@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sachin Kumar | Portfolio</title>
     <!-- Ice Bear Tab Favicon -->
-    <link rel="icon" type="image/jpeg" href="icebear.png">
+    <link rel="icon" type="image/jpeg" href="icebear.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -302,16 +302,16 @@
         </div>
         <div class="md:w-1/2 flex flex-col items-center justify-center relative w-full">
             <div class="absolute inset-0 bg-fuchsia-500 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
-            <!-- 3D Flipping Profile Picture Container -->
+            <!-- 3D Flipping Profile Picture Container using local repo files -->
             <div class="profile-container floating relative z-10 cursor-pointer mb-6">
                 <div id="profile-card-inner" class="profile-card-inner shadow-[0_0_50px_rgba(168,85,247,0.6)] rounded-full border-4 border-purple-400/50">
-                    <!-- Front: Mandalorian -->
+                    <!-- Front Image Local File -->
                     <div class="profile-card-front">
-                        <img src="https://images.unsplash.com/photo-1608889175123-8ee362201f81?q=80&w=800&auto=format&fit=crop" alt="Mandalorian Profile" class="w-full h-full object-cover">
+                        <img src="profile-pic.jpg" alt="Profile Front" class="w-full h-full object-cover">
                     </div>
-                    <!-- Back: Ice Bear -->
+                    <!-- Back Image Local File -->
                     <div class="profile-card-back">
-                        <img src="https://i.pinimg.com/236x/cb/62/80/cb62802e4a44b39873a4eacc8dd5bbec.jpg" alt="Ice Bear Profile" class="w-full h-full object-cover">
+                        <img src="icebear1.jpg" alt="Ice Bear Back" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -693,7 +693,6 @@
                     
                     tempEl.innerText = `${temp}°C`;
                     
-                    // Simple weather code interpretation mapping
                     let conditionText = "Clear Sky ☀️";
                     let emoji = "☀️";
                     
@@ -724,7 +723,6 @@
             }
         }
 
-        // Initialize weather on page load
         window.addEventListener('DOMContentLoaded', () => {
             runFlightLoop();
             updateWeather();
@@ -810,12 +808,10 @@
                 plane.style.transition = 'all 1.8s ease-in-out';
                 plane.style.opacity = '1';
                 
-                // Stop 1: Pune (Data Analyst) at 0s
                 plane.style.left = '18%';
                 plane.style.top = '70%';
                 highlightCard('pune', true);
                 
-                // Stop 2: Noida HHP (Software Dev) at 2s
                 setTimeout(() => {
                     plane.style.left = '50%';
                     plane.style.top = '30%';
@@ -823,7 +819,6 @@
                     highlightCard('hhp', true);
                 }, 2000);
 
-                // Stop 3: Noida Dainik Jagran (ERP Support) at 4s
                 setTimeout(() => {
                     plane.style.left = '82%';
                     plane.style.top = '50%';
@@ -831,18 +826,16 @@
                     highlightCard('dainik', true);
                 }, 4000);
                 
-                // Exit frame at 6s
                 setTimeout(() => {
                     plane.style.left = '110%';
                     plane.style.opacity = '0';
                 }, 6000);
 
-                // Loop restarts every 7 seconds
                 setTimeout(runFlightLoop, 7000);
             }, 100);
         }
 
-        // --- Smart Chat Widget Logic with Supercharged Matrix ---
+        // --- Smart Chat Widget Logic ---
         function toggleChat() {
             const widget = document.getElementById('chat-widget');
             if (widget.classList.contains('chat-closed')) {
